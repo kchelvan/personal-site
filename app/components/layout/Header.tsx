@@ -31,7 +31,11 @@ const Footer = () => {
 				</Link>
 				<div className='flex flew-row mr-8'>
 					{ROUTES?.map((route) => (
-						<Link className='sub-text text-lg px-8' href={route.route}>
+						<Link
+							key={route.route}
+							className='sub-text text-lg px-8'
+							href={route.route}
+						>
 							{route.label}
 						</Link>
 					))}
