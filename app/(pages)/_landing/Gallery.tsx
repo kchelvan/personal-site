@@ -14,7 +14,7 @@ const Gallery = () => {
 						<Image
 							alt='Keshopan Chelvan'
 							src={image}
-							className='transition-all duration-300 ease-in-out hover:scale-125'
+							className='transition-all duration-300 ease-in-out hover:scale-125 hover:rounded-lg'
 						/>
 					);
 				})}
