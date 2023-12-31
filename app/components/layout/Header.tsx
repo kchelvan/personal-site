@@ -10,6 +10,10 @@ const ROUTES = [
 		route: '/#about',
 	},
 	{
+		label: 'SERVICES',
+		route: '/#services',
+	},
+	{
 		label: 'PROJECTS',
 		route: '/#projects',
 	},

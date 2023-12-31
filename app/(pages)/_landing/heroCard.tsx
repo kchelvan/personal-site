@@ -78,7 +78,7 @@ const HeroCard = () => {
 				</div>
 			</div>
 
-			<div id='about' className='pt-8 lg:mt-16 h-screen'>
+			<div id='about' className='pt-8 lg:pt-16 h-screen'>
 				<p className='text-6xl leading-normal'>
 					I am proficient in creating reusable React-based components,
 					streamlining front-end development to bring the client&apos;s vision
@@ -134,7 +134,9 @@ const HeroCard = () => {
 					</div>
 				</div>
 			</div>
-			<p className='mt-32 text-5xl my-8 text-[#928b7b]'>Services</p>
+			<p id='services' className='pt-32 text-5xl my-8 text-[#928b7b]'>
+				Services
+			</p>
 			<div className='grid grid-cols-2'>
 				<div>
 					<p className='text-3xl my-8'>services.</p>
@@ -230,7 +232,10 @@ const HeroCard = () => {
 					<p className='text-4xl text-[#928b7b]'>Salesforce</p>
 				</div>
 			</div>
-			<p className='mt-32 text-4xl my-8'> Previous Projects</p>
+			<p id='projects' className='pt-32 text-4xl my-8'>
+				{' '}
+				Previous Projects
+			</p>
 			<div className='flex flex-row hover:cursor-pointer'>
 				<Image alt='RPRA HazTrack' src={Link_Icon} priority />
 				<p className='text-xl  pl-2 my-8'>RPRA HazTrack</p>
@@ -265,7 +270,10 @@ const HeroCard = () => {
 			<p className='text-lg mt-8'>Tech Stack.</p>
 			<p className='text-base sub-text'>React Native, Salesforce</p>
 
-			<p className='mt-32 text-4xl  my-8'>Contact.</p>
+			<p id='contact' className='pt-32 text-4xl  my-8'>
+				Contact.
+			</p>
+			<p id='contact'>Coming soon. Please refer to Socials in Footer.</p>
 		</div>
 	);
 };
