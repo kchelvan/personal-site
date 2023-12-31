@@ -18,7 +18,6 @@ import RPRA_e from '@/public/projects/rpra-haztrack/rpra-5.webp';
 import RPRA_f from '@/public/projects/rpra-haztrack/rpra-6.webp';
 import RPRA_g from '@/public/projects/rpra-haztrack/rpra-7.webp';
 import Link_Icon from '@/public/icons/link.svg';
-import Link from 'next/link';
 
 const PROJECT_PATHS = {
 	RPRA_HAZTRACK: [RPRA_a, RPRA_b, RPRA_c, RPRA_d, RPRA_e, RPRA_f, RPRA_g],
@@ -30,16 +29,14 @@ const HeroCard = () => {
 	useEffect(() => {
 		setFirstLoad(true);
 	}, []);
+
 	return (
 		<div className='px-16 lg:max-w-[1600px] mx-auto '>
 			<div className='h-screen pt-4'>
 				<div
-					style={{
-						opacity: !firstLoad ? '0' : '1',
-						transition: 'all .9s',
-						visibility: !firstLoad ? 'hidden' : 'visible',
-					}}
-					className='bg-[#c8c6bc] aspect-[11/9] w-1/2 h-5/6 absolute -z-10  left-1/2 transform -translate-x-1/2 rounded-2xl'
+					className={`bg-[#c8c6bc] aspect-[11/9] w-1/2 h-5/6 absolute -z-10  left-1/2 transform -translate-x-1/2 rounded-2xl ${
+						firstLoad ? 'scale-100' : 'scale-125'
+					} transition-all duration-700`}
 				/>
 				<div>
 					<p
@@ -81,7 +78,7 @@ const HeroCard = () => {
 				</div>
 			</div>
 
-			<div id='contact' className='pt-8 lg:mt-16 h-screen'>
+			<div id='about' className='pt-8 lg:mt-16 h-screen'>
 				<p className='text-6xl leading-normal'>
 					I am proficient in creating reusable React-based components,
 					streamlining front-end development to bring the client&apos;s vision
@@ -96,7 +93,7 @@ const HeroCard = () => {
 							style={{
 								objectFit: 'cover',
 							}}
-							className='rounded-3xl'
+							className='rounded-3xl -z-10'
 						/>
 					</div>
 					<div className='h-full w-full flex flex-col justify-between'>
@@ -134,53 +131,6 @@ const HeroCard = () => {
 								business Vanity Dreams Media.
 							</p>
 						</div>
-						<div>
-							<p className='text-2xl lg:px-12 mt-12'>Tech Stack</p>
-							<div className='flex flex-row gap-6 lg:px-12 mt-4 '>
-								<Image
-									alt='Keshopan Chelvan'
-									src={react}
-									height={42}
-									className='hover:scale-150 transition-all'
-								/>
-								<Image
-									alt='Keshopan Chelvan'
-									src={tailwind}
-									height={42}
-									className='hover:scale-150 transition-all'
-								/>
-								<Image
-									alt='Keshopan Chelvan'
-									src={javascript}
-									height={42}
-									className='hover:scale-150 transition-all'
-								/>
-								<Image
-									alt='Keshopan Chelvan'
-									src={typescript}
-									height={42}
-									className='hover:scale-150 transition-all'
-								/>
-								<Image
-									alt='Keshopan Chelvan'
-									src={vercel}
-									height={42}
-									className='hover:scale-150 transition-all'
-								/>
-								<Image
-									alt='Keshopan Chelvan'
-									src={prisma}
-									height={42}
-									className='hover:scale-150 transition-all'
-								/>
-								<Image
-									alt='Keshopan Chelvan'
-									src={salesforce}
-									height={42}
-									className='hover:scale-150 transition-all'
-								/>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -189,10 +139,15 @@ const HeroCard = () => {
 				<div>
 					<p className='text-3xl my-8'>services.</p>
 					<p className='sub-text mx-8 mt-4'>
-						RPRA HazTrack enables generators, carriers, and receivers to create,
-						update, and complete manifests for the movement of hazardous and
-						liquid industrial wastes in compliance with Ontario&apos;s
-						manifesting requirements under Ontario Regulation 347.
+						With a passion for crafting dynamic and responsive user interfaces,
+						my skills in React have enabled me to create seamless and engaging
+						web experiences. From designing intuitive components to optimizing
+						performance, I thrive on the challenges of building robust
+						applications that push the boundaries of modern web development.
+						With a keen eye for detail and a commitment to staying at the
+						forefront of technological advancements, I am dedicated to
+						delivering high-quality, user-centric solutions that elevate the
+						online landscape.
 					</p>
 				</div>
 				<div className='ml-24'>
@@ -206,11 +161,62 @@ const HeroCard = () => {
 				<div>
 					<p className='text-3xl'>tech stack.</p>
 					<p className='sub-text mx-8 mt-4'>
-						RPRA HazTrack enables generators, carriers, and receivers to create,
-						update, and complete manifests for the movement of hazardous and
-						liquid industrial wastes in compliance with Ontario&apos;s
-						manifesting requirements under Ontario Regulation 347.
+						I primarily work with React-based systems in web and mobile
+						development, but my enthusiasm doesn't stop there. I'm always eager
+						to explore new technologies, driven by a curiosity that pushes me to
+						continuously learn. I actively seek opportunities to dive into
+						emerging tools and frameworks, recognizing them as gateways to
+						innovation and efficiency. This dynamic approach to learning ensures
+						that my skill set remains adaptable and ready to tackle the
+						challenges of the ever-evolving tech landscape.
 					</p>
+					<div>
+						<div className='w-5/6 mx-auto h-[1pt] bg-black my-8' />
+						<div className='flex flex-row gap-6 lg:px-8 justify-center'>
+							<Image
+								alt='Keshopan Chelvan'
+								src={react}
+								height={42}
+								className='hover:scale-150 transition-all'
+							/>
+							<Image
+								alt='Keshopan Chelvan'
+								src={tailwind}
+								height={42}
+								className='hover:scale-150 transition-all'
+							/>
+							<Image
+								alt='Keshopan Chelvan'
+								src={javascript}
+								height={42}
+								className='hover:scale-150 transition-all'
+							/>
+							<Image
+								alt='Keshopan Chelvan'
+								src={typescript}
+								height={42}
+								className='hover:scale-150 transition-all'
+							/>
+							<Image
+								alt='Keshopan Chelvan'
+								src={vercel}
+								height={42}
+								className='hover:scale-150 transition-all'
+							/>
+							<Image
+								alt='Keshopan Chelvan'
+								src={prisma}
+								height={42}
+								className='hover:scale-150 transition-all'
+							/>
+							<Image
+								alt='Keshopan Chelvan'
+								src={salesforce}
+								height={42}
+								className='hover:scale-150 transition-all'
+							/>
+						</div>
+					</div>
 				</div>
 				<div className='ml-24 items-center'>
 					<p className='text-4xl text-[#928b7b]'>React</p>
@@ -224,7 +230,7 @@ const HeroCard = () => {
 					<p className='text-4xl text-[#928b7b]'>Salesforce</p>
 				</div>
 			</div>
-			<p className='mt-32 text-4xl lg:px-12 my-8'> Previous Projects</p>
+			<p className='mt-32 text-4xl my-8'> Previous Projects</p>
 			<div className='flex flex-row hover:cursor-pointer'>
 				<Image alt='RPRA HazTrack' src={Link_Icon} priority />
 				<p className='text-xl  pl-2 my-8'>RPRA HazTrack</p>
@@ -240,18 +246,26 @@ const HeroCard = () => {
 					/>
 				))}
 			</div>
-			<p className='sub-text mx-8 mt-4'>
-				RPRA HazTrack enables generators, carriers, and receivers to create,
-				update, and complete manifests for the movement of hazardous and liquid
-				industrial wastes in compliance with Ontario&apos;s manifesting
-				requirements under Ontario Regulation 347. Manage and track manifests
-				for Ontario&apos;s hazardous waste program easily and effectively, and
-				seamlessly integrate your manifest content with the Hazardous Waste
-				Program Registry. All activities required for Ontario&apos;s manifesting
-				process, including signatures, refusals and corrections, can be
-				accomplished through the app.
+			<p className='sub-text mt-4'>
+				In this project, I led and mentored a team of developers to build a
+				React Native-based application called RPRA HazTrack from Inception to
+				Production and Maintenance for both iOS and Android. RPRA HazTrack
+				enables generators, carriers, and receivers to create, update, and
+				complete manifests for the movement of hazardous and liquid industrial
+				wastes in compliance with Ontario&apos;s manifesting requirements under
+				Ontario Regulation 347. The app provides the ability for users to manage
+				and track manifests for Ontario&apos;s hazardous waste program easily
+				and effectively, and seamlessly integrate their manifest content with
+				the Hazardous Waste Program Registry. All activities required for
+				Ontario&apos;s manifesting process, including signatures, refusals and
+				corrections, can be accomplished through the app. The final product was
+				one the client was very content with.
 			</p>
-			<p className='mt-32 text-4xl lg:px-12 my-8'>Contact.</p>
+
+			<p className='text-lg mt-8'>Tech Stack.</p>
+			<p className='text-base sub-text'>React Native, Salesforce</p>
+
+			<p className='mt-32 text-4xl  my-8'>Contact.</p>
 		</div>
 	);
 };

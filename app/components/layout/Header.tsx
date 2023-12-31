@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useMediaQuery, useTheme } from '@mui/material';
 
@@ -71,11 +71,32 @@ const HamburgerMenu = () => {
 
 const Header = () => {
 	const theme = useTheme();
+	const [hasScrolled, setHasScrolled] = useState(false);
 	const isMobileSize = useMediaQuery(theme.breakpoints.down('md'));
 
+	useEffect(() => {
+		const onScroll = () => {
+			!hasScrolled && setHasScrolled(true);
+		};
+		// clean up code
+		window.removeEventListener('scroll', onScroll);
+		window.addEventListener('scroll', onScroll, { passive: true });
+		return () => window.removeEventListener('scroll', onScroll);
+	}, []);
+
 	return (
-		<div className=''>
-			<div className='flex flex-row my-12 justify-between items-center'>
+		<div
+			style={{
+				position: 'sticky',
+				top: 0,
+				height: 0,
+				opacity: !hasScrolled ? '0' : '1',
+				transition: 'all .9s',
+				visibility: !hasScrolled ? 'hidden' : 'visible',
+				marginBottom: !hasScrolled ? 56 : 128,
+			}}
+		>
+			<div className='flex flex-row py-4 justify-between items-center bg-white'>
 				<Link
 					className='sub-text text-lg px-12 hover:cursor-pointer'
 					href={'/#hero'}
@@ -87,7 +108,7 @@ const Header = () => {
 						{ROUTES?.map((route) => (
 							<Link
 								key={route.route}
-								className='sub-text text-lg px-8 hover:scale-110 transition-all'
+								className='sub-text text-lg px-8 hover:scale-105 transition-all hover:underline'
 								href={route.route}
 							>
 								{route.label}
