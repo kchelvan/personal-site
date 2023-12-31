@@ -5,17 +5,17 @@ import Link from 'next/link';
 import { useMediaQuery, useTheme } from '@mui/material';
 
 const ROUTES = [
-	{
-		label: 'GALLERY',
-		route: '/gallery',
-	},
+	// {
+	// 	label: 'GALLERY',
+	// 	route: '/gallery',
+	// },
 	{
 		label: 'RESUME',
 		route: '/resume',
 	},
 	{
-		label: 'CAREER',
-		route: '/career',
+		label: 'PROJECTS',
+		route: '/projects',
 	},
 	{
 		label: 'CONTACT',
@@ -80,7 +80,10 @@ const Header = () => {
 	return (
 		<div>
 			<div className='flex flex-row my-12 justify-between items-center'>
-				<Link className='sub-text text-lg px-12' href={'/'}>
+				<Link
+					className='sub-text text-lg px-12 hover:cursor-pointer'
+					href={'/'}
+				>
 					PORTFOLIO
 				</Link>
 				{!isMobileSize ? (
@@ -88,7 +91,7 @@ const Header = () => {
 						{ROUTES?.map((route) => (
 							<Link
 								key={route.route}
-								className='sub-text text-lg px-8'
+								className='sub-text text-lg px-8 hover:scale-110 transition-all'
 								href={route.route}
 							>
 								{route.label}

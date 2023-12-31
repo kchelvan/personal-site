@@ -34,3 +34,18 @@
    font-family: 'Special Elite', serif;
   }
 }
+
+mark {
+	@apply inline-block pr-1 pl-1 py-0;
+	margin-top: 0.15rem;
+	margin-bottom: 0.15rem;
+}
+
+.mark-rounded {
+	@apply rounded-sm shadow-md;
+	
+}
+
+.mark-teal {
+	@apply bg-teal-500  text-white;
+}

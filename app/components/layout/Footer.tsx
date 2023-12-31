@@ -28,9 +28,14 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<p className={`text-base sub-text text-[#FAFAFA] mt-8`}>
-				© 2023 Keshopan Chelvan
-			</p>
+			<div className='flex flex-row justify-between'>
+				<p className={`text-base sub-text text-[#FAFAFA] mt-8`}>
+					© 2023 Keshopan Chelvan
+				</p>
+				<p className={`text-base sub-text text-[#FAFAFA] mt-8`}>
+					Website developed by Keshopan using NextJS
+				</p>
+			</div>
 		</div>
 	);
 };

@@ -6,12 +6,12 @@ import Gallery from './Gallery';
 
 const LandingPage = () => {
 	return (
-		<div className={`w-full bg-slate-${COLORS.pageBackground}`}>
+		<div className={`w-full`}>
 			<HeroCard />
-			<div className='w-full h-[1pt] bg-black my-16' />
-			<DeveloperProjects />
-			<div className='w-full h-[1pt] bg-black my-16' />
-			<Gallery />
+			<div className='w-full h-[1pt] bg-black mt-16' />
+			{/* <DeveloperProjects />
+			<div className='w-full h-[1pt] bg-black my-16' /> */}
+			{/* <Gallery /> */}
 		</div>
 	);
 };
