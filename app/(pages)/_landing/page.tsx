@@ -6,7 +6,7 @@ import Gallery from './Gallery';
 
 const LandingPage = () => {
 	return (
-		<div className={`w-full`}>
+		<div id='hero' className={`w-full`}>
 			<HeroCard />
 			<div className='w-full h-[1pt] bg-black mt-16' />
 			{/* <DeveloperProjects />
