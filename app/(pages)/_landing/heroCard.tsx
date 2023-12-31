@@ -49,7 +49,7 @@ const HeroCard = () => {
 							firstLoad ? 'lg:text-[120pt] ' : 'lg:text-[100pt]'
 						} text-left lg:text-center transition-all text-[#1C1C1D] pt-16`}
 					>
-						HELLO, I'M KESHOPAN
+						HELLO, I&apos;M KESHOPAN
 					</p>
 					<p
 						style={{
@@ -61,7 +61,7 @@ const HeroCard = () => {
 							firstLoad ? 'lg:text-[120pt] ' : 'lg:text-[100pt]'
 						} text-left lg:text-center transition-all text-[#edeae5]`}
 					>
-						HELLO, I'M KESHOPAN
+						HELLO, I&apos;M KESHOPAN
 					</p>
 					<p
 						style={{
@@ -73,7 +73,7 @@ const HeroCard = () => {
 							firstLoad ? 'lg:text-[120pt] ' : 'lg:text-[100pt]'
 						} text-left lg:text-center transition-all text-[#1C1C1D]`}
 					>
-						HELLO, I'M KESHOPAN
+						HELLO, I&apos;M KESHOPAN
 					</p>
 				</div>
 			</div>
@@ -117,8 +117,8 @@ const HeroCard = () => {
 								into streamlined digital applications.
 								<br />
 								<br />
-								Keshopan has completed his master's thesis with a focus on early
-								fake news detection using{' '}
+								Keshopan has completed his master&apos;s thesis with a focus on
+								early fake news detection using{' '}
 								<span className='bg-[#928b7b] rounded-lg p-1 text-white'>
 									Artificial Intelligence and Machine Learning.
 								</span>{' '}
@@ -162,13 +162,13 @@ const HeroCard = () => {
 					<p className='text-3xl'>tech stack.</p>
 					<p className='sub-text mx-8 mt-4'>
 						I primarily work with React-based systems in web and mobile
-						development, but my enthusiasm doesn't stop there. I'm always eager
-						to explore new technologies, driven by a curiosity that pushes me to
-						continuously learn. I actively seek opportunities to dive into
-						emerging tools and frameworks, recognizing them as gateways to
-						innovation and efficiency. This dynamic approach to learning ensures
-						that my skill set remains adaptable and ready to tackle the
-						challenges of the ever-evolving tech landscape.
+						development, but my enthusiasm doesn&apos;t stop there. I&apos;m
+						always eager to explore new technologies, driven by a curiosity that
+						pushes me to continuously learn. I actively seek opportunities to
+						dive into emerging tools and frameworks, recognizing them as
+						gateways to innovation and efficiency. This dynamic approach to
+						learning ensures that my skill set remains adaptable and ready to
+						tackle the challenges of the ever-evolving tech landscape.
 					</p>
 					<div>
 						<div className='w-5/6 mx-auto h-[1pt] bg-black my-8' />
