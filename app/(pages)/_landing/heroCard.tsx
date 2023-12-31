@@ -84,8 +84,8 @@ const HeroCard = () => {
 			<div id='contact' className='pt-8 lg:mt-16 h-screen'>
 				<p className='text-6xl leading-normal'>
 					I am proficient in creating reusable React-based components,
-					streamlining front-end development to bring the client's vision to
-					life.
+					streamlining front-end development to bring the client&apos;s vision
+					to life.
 				</p>
 				<div className=' grid grid-col-1 lg:grid-cols-2 mt-16 '>
 					<div className='relative'>
@@ -125,11 +125,11 @@ const HeroCard = () => {
 								<span className='bg-[#928b7b] rounded-lg p-1 text-white'>
 									Artificial Intelligence and Machine Learning.
 								</span>{' '}
-								He was nominated for the Governor General's Gold Medal for
+								He was nominated for the Governor General&apos;s Gold Medal for
 								exceptional research work and presentational skills.
 								<br />
 								<br />
-								During my spare time, you'll find me exploring the city and
+								During my spare time, you&apos;ll find me exploring the city and
 								capturing photos. He has launched his professional photography
 								business Vanity Dreams Media.
 							</p>
@@ -191,8 +191,8 @@ const HeroCard = () => {
 					<p className='sub-text mx-8 mt-4'>
 						RPRA HazTrack enables generators, carriers, and receivers to create,
 						update, and complete manifests for the movement of hazardous and
-						liquid industrial wastes in compliance with Ontario’s manifesting
-						requirements under Ontario Regulation 347.
+						liquid industrial wastes in compliance with Ontario&apos;s
+						manifesting requirements under Ontario Regulation 347.
 					</p>
 				</div>
 				<div className='ml-24'>
@@ -208,8 +208,8 @@ const HeroCard = () => {
 					<p className='sub-text mx-8 mt-4'>
 						RPRA HazTrack enables generators, carriers, and receivers to create,
 						update, and complete manifests for the movement of hazardous and
-						liquid industrial wastes in compliance with Ontario’s manifesting
-						requirements under Ontario Regulation 347.
+						liquid industrial wastes in compliance with Ontario&apos;s
+						manifesting requirements under Ontario Regulation 347.
 					</p>
 				</div>
 				<div className='ml-24 items-center'>
@@ -243,13 +243,13 @@ const HeroCard = () => {
 			<p className='sub-text mx-8 mt-4'>
 				RPRA HazTrack enables generators, carriers, and receivers to create,
 				update, and complete manifests for the movement of hazardous and liquid
-				industrial wastes in compliance with Ontario’s manifesting requirements
-				under Ontario Regulation 347. Manage and track manifests for Ontario’s
-				hazardous waste program easily and effectively, and seamlessly integrate
-				your manifest content with the Hazardous Waste Program Registry. All
-				activities required for Ontario’s manifesting process, including
-				signatures, refusals and corrections, can be accomplished through the
-				app.
+				industrial wastes in compliance with Ontario&apos;s manifesting
+				requirements under Ontario Regulation 347. Manage and track manifests
+				for Ontario&apos;s hazardous waste program easily and effectively, and
+				seamlessly integrate your manifest content with the Hazardous Waste
+				Program Registry. All activities required for Ontario&apos;s manifesting
+				process, including signatures, refusals and corrections, can be
+				accomplished through the app.
 			</p>
 			<p className='mt-32 text-4xl lg:px-12 my-8'>Contact.</p>
 		</div>
