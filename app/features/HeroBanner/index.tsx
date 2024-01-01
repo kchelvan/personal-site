@@ -16,11 +16,11 @@ const NameBanner = ({ color, firstLoad, styles }: NameBannerTypes) => {
 				transition: 'all .9s',
 				visibility: !firstLoad ? 'hidden' : 'visible',
 			}}
-			className={`  ${
+			className={`${
 				firstLoad
-					? 'text-[36pt] md:text-[64pt] lg:text-[90pt] 2xl:text-[120pt] '
-					: 'text-[26pt] md:text-[44pt] lg:text-[70pt] 2xl:text-[100pt]'
-			} text-left lg:text-center transition-all text-[${color}] ${
+					? 'text-[34pt] md:text-[64pt] lg:text-[90pt] xl:text-[120pt]'
+					: 'text-[24pt] md:text-[44pt] lg:text-[70pt] xl:text-[100pt]'
+			} text-center transition-all text-[${color}] ${
 				styles || ''
 			} whitespace-nowrap`}
 		>
