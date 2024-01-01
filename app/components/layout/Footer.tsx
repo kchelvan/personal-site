@@ -33,7 +33,7 @@ const Footer = () => {
 					© 2023 Keshopan Chelvan
 				</p>
 				<p className={`text-base sub-text text-[#FAFAFA] mt-8`}>
-					Website developed by Keshopan using NextJS
+					Designed and Developed by Keshopan using NextJS
 				</p>
 			</div>
 		</div>

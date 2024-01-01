@@ -97,7 +97,7 @@ const Header = () => {
 				opacity: !hasScrolled ? '0' : '1',
 				transition: 'all .9s',
 				visibility: !hasScrolled ? 'hidden' : 'visible',
-				marginBottom: !hasScrolled ? 56 : 128,
+				zIndex: 10,
 			}}
 		>
 			<div className='flex flex-row py-4 justify-between items-center bg-white'>
