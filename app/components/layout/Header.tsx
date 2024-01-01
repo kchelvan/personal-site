@@ -79,16 +79,13 @@ const HamburgerMenu = () => {
 
 const Header = () => {
 	const theme = useTheme();
-	const [hasScrolled, setHasScrolled] = useState(false);
+	const [hasLoaded, setHasLoaded] = useState(false);
 	const isMobileSize = useMediaQuery(theme.breakpoints.down('md'));
 
 	useEffect(() => {
-		const onScroll = () => {
-			!hasScrolled && setHasScrolled(true);
-		};
-		window.removeEventListener('scroll', onScroll);
-		window.addEventListener('scroll', onScroll, { passive: true });
-		return () => window.removeEventListener('scroll', onScroll);
+		setTimeout(() => {
+			setHasLoaded(true);
+		}, 900);
 	}, []);
 
 	return (
@@ -96,9 +93,9 @@ const Header = () => {
 			style={{
 				top: 0,
 				height: 0,
-				opacity: !hasScrolled ? '0' : '1',
+				opacity: !hasLoaded ? '0' : '1',
 				transition: 'all .9s',
-				visibility: !hasScrolled ? 'hidden' : 'visible',
+				visibility: !hasLoaded ? 'hidden' : 'visible',
 				zIndex: 10,
 				position: 'sticky',
 			}}
