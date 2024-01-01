@@ -32,7 +32,7 @@ const HamburgerMenu = () => {
 					isOpen ? 'w-2/3 px-8' : 'w-0'
 				} bg-[#1C1C1D] py-8 overflow-hidden`}
 			>
-				<p className='text-[#FAFAFA] mb-4 md:mb-8 text-2xl md:text-4xl text-right mt-16'>
+				<p className='text-[#FAFAFA] mb-8 text-4xl md:text-4xl text-right mt-16'>
 					PORTFOLIO
 				</p>
 				{ROUTES?.map((route) => (
@@ -41,7 +41,7 @@ const HamburgerMenu = () => {
 						href={route.route}
 						onClick={() => setIsOpen(false)}
 					>
-						<p className='text-[#FAFAFA] text-right mb-2 md:mb-4 text-base md:text-2xl'>
+						<p className='text-[#FAFAFA] text-right mb-2 md:mb-4 text-2xl md:text-2xl leading-relaxed'>
 							{route.label}
 						</p>
 					</Link>
