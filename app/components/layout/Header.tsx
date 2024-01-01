@@ -30,7 +30,7 @@ const HamburgerMenu = () => {
 			<div
 				className={`transition-all duration-300 ease-in-out absolute h-screen right-0 top-0 ${
 					isOpen ? 'w-2/3 px-8' : 'w-0'
-				} bg-[#1C1C1D] py-8`}
+				} bg-[#1C1C1D] py-8 overflow-hidden`}
 			>
 				<p className='text-[#FAFAFA] mb-4 md:mb-8 text-2xl md:text-4xl text-right mt-16'>
 					PORTFOLIO
