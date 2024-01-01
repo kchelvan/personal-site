@@ -30,7 +30,7 @@ const Services = () => {
 						online landscape.
 					</p>
 				</div>
-				<div className='mt-8 lg:ml-24 lg:mt-0  flex flex-row flex-wrap md:flex-col'>
+				<div className='mt-8 lg:ml-24 lg:mt-0'>
 					{SERVICES?.map((service: string) => (
 						<p key={service} className='text-4xl text-[#928b7b]'>
 							{service}
@@ -53,7 +53,7 @@ const Services = () => {
 					</p>
 					<div>
 						<div className='w-5/6 mx-auto h-[1pt] bg-black my-8' />
-						<div className='flex flex-row gap-6 lg:px-8 justify-center flex-wrap'>
+						<div className='flex flex-row gap-6 lg:px-8'>
 							<Image
 								alt='Keshopan Chelvan'
 								src={react}
