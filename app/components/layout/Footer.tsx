@@ -28,7 +28,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className='flex flex-row justify-between'>
+			<div className='flex flex-col md:flex-row justify-between'>
 				<p className={`text-base sub-text text-[#FAFAFA] mt-8`}>
 					© 2023 Keshopan Chelvan
 				</p>

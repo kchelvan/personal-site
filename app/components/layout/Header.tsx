@@ -28,15 +28,19 @@ const HamburgerMenu = () => {
 	return (
 		<div>
 			<div
-				className={`transition-all duration-300 ease-in-out absolute h-full right-0 top-0 ${
+				className={`transition-all duration-300 ease-in-out absolute h-screen right-0 top-0 ${
 					isOpen ? 'w-2/3 px-8' : 'w-0'
-				} bg-[#1C1C1D] py-8 overflow-hidden`}
+				} bg-[#1C1C1D] py-8`}
 			>
 				<p className='text-[#FAFAFA] mb-4 md:mb-8 text-2xl md:text-4xl text-right mt-16'>
 					PORTFOLIO
 				</p>
 				{ROUTES?.map((route) => (
-					<Link key={route.route} href={route.route}>
+					<Link
+						key={route.route}
+						href={route.route}
+						onClick={() => setIsOpen(false)}
+					>
 						<p className='text-[#FAFAFA] text-right mb-2 md:mb-4 text-base md:text-2xl'>
 							{route.label}
 						</p>
@@ -82,7 +86,6 @@ const Header = () => {
 		const onScroll = () => {
 			!hasScrolled && setHasScrolled(true);
 		};
-		// clean up code
 		window.removeEventListener('scroll', onScroll);
 		window.addEventListener('scroll', onScroll, { passive: true });
 		return () => window.removeEventListener('scroll', onScroll);
@@ -91,13 +94,13 @@ const Header = () => {
 	return (
 		<div
 			style={{
-				position: 'sticky',
 				top: 0,
 				height: 0,
 				opacity: !hasScrolled ? '0' : '1',
 				transition: 'all .9s',
 				visibility: !hasScrolled ? 'hidden' : 'visible',
 				zIndex: 10,
+				position: 'sticky',
 			}}
 		>
 			<div className='flex flex-row py-4 justify-between items-center bg-white'>

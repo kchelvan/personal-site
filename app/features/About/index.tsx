@@ -5,14 +5,14 @@ import profilePic from '@/public/images/profile_image.jpg';
 
 const About = () => {
 	return (
-		<div id='about' className='pt-8 lg:pt-16'>
+		<div id='about' className='pt-16 lg:pt-16'>
 			<p className='text-4xl lg:text-6xl leading-normal '>
 				I am proficient in creating reusable React-based components,
 				streamlining front-end development to bring the client&apos;s vision to
 				life.
 			</p>
 			<div className='grid grid-col-1 lg:grid-cols-2 mt-16'>
-				<div className='relative w-full h-[256px] md:w-full md:h-full'>
+				<div className='relative w-full h-[256px] lg:w-full lg:h-full'>
 					<Image
 						alt='Keshopan Chelvan'
 						src={profilePic}

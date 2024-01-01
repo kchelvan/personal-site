@@ -30,7 +30,7 @@ type ProjectDescriptionTypes = {
 
 const ProjectHeader = ({ label }: ProjectHeaderTypes) => {
 	return (
-		<div className='flex flex-row hover:cursor-pointer'>
+		<div className='flex flex-row hover:cursor-pointer w-auto h-auto'>
 			<Image alt='RPRA HazTrack' src={Link_Icon} priority />
 			<p className='text-xl  pl-2 my-8'>{label || ''}</p>
 		</div>
@@ -42,11 +42,11 @@ const ProjectImages = ({ label, imagesArray }: ProjectImagesTypes) => {
 		<div className='flex flex-row gap-4 overflow-auto '>
 			{imagesArray?.map((path, index) => (
 				<Image
-					key='index'
+					key={index}
 					alt={`${label} ${index}`}
 					src={path}
 					height={512}
-					className='hover:scale-110 transition-all'
+					className='hover:scale-110 transition-all w-auto'
 				/>
 			))}
 		</div>

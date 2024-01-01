@@ -12,7 +12,7 @@ import { SERVICES, TECH_STACK } from './constants';
 const Services = () => {
 	return (
 		<div>
-			<p id='services' className='pt-32 text-5xl my-8 text-[#928b7b]'>
+			<p id='services' className='pt-16 mt-16 text-5xl my-8 text-[#928b7b]'>
 				Services.
 			</p>
 			<div className='grid grid-cols-1 lg:grid-cols-2'>
