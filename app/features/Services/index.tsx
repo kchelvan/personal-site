@@ -32,7 +32,9 @@ const Services = () => {
 				</div>
 				<div className='mt-8 lg:ml-24 lg:mt-0  flex flex-row flex-wrap md:flex-col'>
 					{SERVICES?.map((service: string) => (
-						<p className='text-4xl text-[#928b7b]'>{service}</p>
+						<p key={service} className='text-4xl text-[#928b7b]'>
+							{service}
+						</p>
 					))}
 				</div>
 			</div>
@@ -99,7 +101,9 @@ const Services = () => {
 				</div>
 				<div className='mt-16 lg:ml-24 lg:mt-0 items-left'>
 					{TECH_STACK?.map((feature: string) => (
-						<p className='text-4xl text-[#928b7b]'>{feature}</p>
+						<p key={feature} className='text-4xl text-[#928b7b]'>
+							{feature}
+						</p>
 					))}
 				</div>
 			</div>
