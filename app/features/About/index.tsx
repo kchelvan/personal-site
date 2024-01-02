@@ -11,8 +11,8 @@ const About = () => {
 				streamlining front-end development to bring the client&apos;s vision to
 				life.
 			</p>
-			<div className='grid grid-col-1 lg:grid-cols-2 mt-16'>
-				<div className='relative w-full h-[256px] lg:w-full lg:h-full'>
+			<div className='grid grid-col-1 xl:grid-cols-2 mt-16'>
+				<div className='relative w-full h-[256px] xl:w-full xl:h-full'>
 					<Image
 						alt='Keshopan Chelvan'
 						src={profilePic}
@@ -23,9 +23,9 @@ const About = () => {
 						className='rounded-3xl -z-10'
 					/>
 				</div>
-				<div className='h-full flex flex-col justify-between'>
-					<div className='bg-[#edeae5] lg:mx-12 p-16 rounded-3xl'>
-						<p className='text-4xl my-8 lg:my-0'>ABOUT ME.</p>
+				<div className='h-full flex flex-col justify-between mt-8 xl:mt-0'>
+					<div className='bg-[#edeae5] xl:mx-12 py-4 px-8 lg:p-16 rounded-3xl'>
+						<p className='text-4xl my-8 xl:my-0'>ABOUT ME.</p>
 						<p className='text-lg sub-text mt-12 '>
 							As an experienced senior{' '}
 							<span className='bg-[#928b7b] rounded-lg p-1 text-white'>

@@ -56,7 +56,7 @@ const Services = () => {
 					</p>
 					<div>
 						<div className='w-5/6 mx-auto h-[1pt] bg-black my-8' />
-						<div className='flex flex-row gap-6 lg:px-8'>
+						<div className='flex flex-row gap-6 lg:px-8 flex-wrap justify-center '>
 							<Image
 								alt='Keshopan Chelvan'
 								src={react}
