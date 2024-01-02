@@ -19,14 +19,13 @@ const NameBanner = ({ color, firstLoad, styles }: NameBannerTypes) => {
 				opacity: !firstLoad ? '0' : '1',
 				transition: 'all .9s',
 				visibility: !firstLoad ? 'hidden' : 'visible',
+				color: color,
 			}}
 			className={`${
 				firstLoad
 					? 'text-[34pt] md:text-[64pt] lg:text-[90pt] xl:text-[120pt]'
 					: 'text-[24pt] md:text-[44pt] lg:text-[70pt] xl:text-[100pt]'
-			} text-center transition-all text-[${color}] ${
-				styles || ''
-			} whitespace-nowrap`}
+			} text-center transition-all ${styles || ''} whitespace-nowrap`}
 		>
 			HELLO, I&apos;M KESHOPAN
 		</p>
