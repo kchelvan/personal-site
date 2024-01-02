@@ -34,7 +34,7 @@ const Services = () => {
 					{SERVICES?.map((service: string) => (
 						<p
 							key={service}
-							className='text-4xl text-[#928b7b] transition-all hover:scale-110'
+							className='text-4xl text-[#928b7b] transition-all hover:scale-[120%] w-fit'
 						>
 							{service}
 						</p>
@@ -106,7 +106,7 @@ const Services = () => {
 					{TECH_STACK?.map((feature: string) => (
 						<p
 							key={feature}
-							className='text-4xl text-[#928b7b]  transition-all hover:scale-110'
+							className='text-4xl text-[#928b7b] transition-all hover:scale-[120%] w-fit'
 						>
 							{feature}
 						</p>

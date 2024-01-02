@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import GithubIcon from '@/public/icons/github-mark.svg';
 import LinkedInIcon from '@/public/icons/linkedin.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type NameBannerTypes = {
 	color: string;
@@ -65,18 +66,22 @@ const HeroBanner = () => {
 					}}
 					className='flex flex-row gap-8 justify-center bg-[#edeae5] w-fit mx-auto py-2 px-4 rounded-full -mt-6'
 				>
-					<Image
-						src={GithubIcon}
-						alt='GitHub Logo'
-						height={24}
-						className='hover:scale-125 transition-all'
-					/>
-					<Image
-						src={LinkedInIcon}
-						alt='GitHub Logo'
-						height={24}
-						className='hover:scale-125 transition-all'
-					/>
+					<Link href={'https://github.com/kchelvan'}>
+						<Image
+							src={GithubIcon}
+							alt='GitHub Logo'
+							height={24}
+							className='hover:scale-125 transition-all hover:cursor-pointer'
+						/>
+					</Link>
+					<Link href={'https://www.linkedin.com/in/keshopan-chelvan/'}>
+						<Image
+							src={LinkedInIcon}
+							alt='GitHub Logo'
+							height={24}
+							className='hover:scale-125 transition-all hover:cursor-pointer'
+						/>
+					</Link>
 				</div>
 			</div>
 		</div>
