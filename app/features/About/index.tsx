@@ -5,7 +5,7 @@ import profilePic from '@/public/images/profile_image.jpg';
 
 const About = () => {
 	return (
-		<div id='about' className='min-h-screen flex flex-col justify-center'>
+		<div id='about' className='min-h-screen flex flex-col justify-center pt-32'>
 			<p className='text-4xl lg:text-6xl leading-normal'>
 				I am proficient in creating reusable React-based components,
 				streamlining front-end development to bring the client&apos;s vision to
