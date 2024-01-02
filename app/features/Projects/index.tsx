@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link_Icon from '@/public/icons/link.svg';
@@ -10,8 +12,25 @@ import RPRA_e from '@/public/projects/rpra-haztrack/rpra-5.webp';
 import RPRA_f from '@/public/projects/rpra-haztrack/rpra-6.webp';
 import RPRA_g from '@/public/projects/rpra-haztrack/rpra-7.webp';
 
+import Marble_a from '@/public/projects/marble/marble-1.webp';
+import Marble_b from '@/public/projects/marble/marble-2.webp';
+import Marble_c from '@/public/projects/marble/marble-3.webp';
+import Marble_d from '@/public/projects/marble/marble-4.webp';
+import Marble_e from '@/public/projects/marble/marble-5.webp';
+import Marble_f from '@/public/projects/marble/marble-6.webp';
+import Marble_g from '@/public/projects/marble/marble-7.webp';
+
 const PROJECT_PATHS = {
 	RPRA_HAZTRACK: [RPRA_a, RPRA_b, RPRA_c, RPRA_d, RPRA_e, RPRA_f, RPRA_g],
+	Marble: [
+		Marble_a,
+		Marble_b,
+		Marble_c,
+		Marble_d,
+		Marble_e,
+		Marble_f,
+		Marble_g,
+	],
 };
 
 type ProjectHeaderTypes = {
@@ -38,17 +57,28 @@ const ProjectHeader = ({ label }: ProjectHeaderTypes) => {
 };
 
 const ProjectImages = ({ label, imagesArray }: ProjectImagesTypes) => {
+	const [imageCounter, setImageCounter] = useState(0);
+
+	const api = () => {
+		if (imageCounter < imagesArray.length - 1) {
+			setImageCounter(imageCounter + 1);
+		} else {
+			setImageCounter(0);
+		}
+		setTimeout(api, 1000);
+	};
+
+	useEffect(() => {
+		api();
+	}, []);
+
 	return (
-		<div className='flex flex-row gap-4 overflow-auto '>
-			{imagesArray?.map((path, index) => (
-				<Image
-					key={index}
-					alt={`${label} ${index}`}
-					src={path}
-					height={512}
-					className='hover:scale-110 transition-all w-auto'
-				/>
-			))}
+		<div className='transition-all w-full'>
+			<Image
+				alt={`${label} ${imageCounter}`}
+				src={imagesArray[imageCounter]}
+				height={512}
+			/>
 		</div>
 	);
 };
@@ -75,16 +105,18 @@ const ProjectDescription = ({
 const Projects = () => {
 	return (
 		<div>
-			<p id='projects' className='pt-32 text-5xl my-8 text-[#928b7b]'>
+			<p id='projects' className='text-5xl my-8 text-[#928b7b]'>
 				Previous Projects.
 			</p>
-			<ProjectHeader label='RPRA HazTrack' />
-			<ProjectImages
-				label='RPRA HazTrack'
-				imagesArray={PROJECT_PATHS?.RPRA_HAZTRACK}
-			/>
-			<ProjectDescription
-				description="In this project, I led and mentored a team of developers to build a
+			<div className='grid grid-cols-3 gap-16'>
+				<div>
+					<ProjectHeader label='RPRA HazTrack' />
+					<ProjectImages
+						label='RPRA HazTrack'
+						imagesArray={PROJECT_PATHS?.RPRA_HAZTRACK}
+					/>
+					<ProjectDescription
+						description="In this project, I led and mentored a team of developers to build a
       React Native-based application called RPRA HazTrack from Inception to
       Production and Maintenance for both iOS and Android. RPRA HazTrack
       enables generators, carriers, and receivers to create, update, and
@@ -97,16 +129,35 @@ const Projects = () => {
       Ontario's manifesting process, including signatures, refusals and
       corrections, can be accomplished through the app. The final product was
       one the client was very content with."
-				techStack={['React Native', 'Salesforce']}
-			/>
-			<ProjectHeader label='Marble' />
-			<ProjectDescription description='Details coming soon!' techStack={[]} />
-			<ProjectHeader label='JV Homes' />
-			<ProjectDescription description='Details coming soon!' techStack={[]} />
-			<ProjectHeader label='Portfolio' />
-			<ProjectDescription description='Details coming soon!' techStack={[]} />
-			<ProjectHeader label='Vanity Dreams' />
-			<ProjectDescription description='Details coming soon!' techStack={[]} />
+						techStack={['React Native', 'Salesforce']}
+					/>
+				</div>
+				<div>
+					<ProjectHeader label='Marble' />
+					<ProjectImages
+						label='RPRA HazTrack'
+						imagesArray={PROJECT_PATHS?.Marble}
+					/>
+					<ProjectDescription
+						description='In this project, Keshopan acted as the senior front-end developer, where he worked with and mentored a team of front-end developed to develop a baby development tracker called Marble using Artificial Intelligence. He collaborated with a team of backend developers, data analysts, designers, and business management. The Marble app is a novel tool for new parents to use to track their baby’s development in-between doctor visits. The app gives parents of newborn infants many advantages, including: tracking for feedings, sleeping, diapers, and growth across all developmental milestones: physical, gross motor, communication, cognitive, social, and emotional.'
+						techStack={['React Native']}
+					/>
+				</div>
+				<div>
+					<ProjectHeader label='JV Homes' />
+					<ProjectDescription
+						description='Details coming soon!'
+						techStack={[]}
+					/>
+				</div>
+				<div>
+					<ProjectHeader label='GFL SMS' />
+					<ProjectDescription
+						description='Details coming soon!'
+						techStack={[]}
+					/>
+				</div>
+			</div>
 		</div>
 	);
 };

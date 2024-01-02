@@ -7,12 +7,16 @@ import HeroBanner from './HeroBanner';
 
 const HeroCard = () => {
 	return (
-		<div className='px-16 lg:max-w-[1600px] mx-auto '>
-			<HeroBanner />
-			<About />
-			<Services />
-			<Projects />
-			<Contact />
+		<div>
+			<div className='px-16 mx-auto lg:max-w-[1600px]'>
+				<HeroBanner />
+				<About />
+				<Services />
+				<Projects />
+			</div>
+			<div className='bg-[#edeae5] mt-32'>
+				<Contact />
+			</div>
 		</div>
 	);
 };

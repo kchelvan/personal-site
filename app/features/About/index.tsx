@@ -5,8 +5,8 @@ import profilePic from '@/public/images/profile_image.jpg';
 
 const About = () => {
 	return (
-		<div id='about' className='pt-16 lg:pt-16'>
-			<p className='text-4xl lg:text-6xl leading-normal '>
+		<div id='about' className='min-h-screen flex flex-col justify-center'>
+			<p className='text-4xl lg:text-6xl leading-normal'>
 				I am proficient in creating reusable React-based components,
 				streamlining front-end development to bring the client&apos;s vision to
 				life.
@@ -23,10 +23,10 @@ const About = () => {
 						className='rounded-3xl -z-10'
 					/>
 				</div>
-				<div className='h-full w-full flex flex-col justify-between'>
-					<div>
-						<p className='text-4xl lg:px-12 my-8 lg:my-0'>ABOUT ME.</p>
-						<p className='text-lg lg:px-12 sub-text mt-12 '>
+				<div className='h-full flex flex-col justify-between'>
+					<div className='bg-[#edeae5] lg:mx-12 p-16 rounded-3xl'>
+						<p className='text-4xl my-8 lg:my-0'>ABOUT ME.</p>
+						<p className='text-lg sub-text mt-12 '>
 							As an experienced senior{' '}
 							<span className='bg-[#928b7b] rounded-lg p-1 text-white'>
 								React/React Native

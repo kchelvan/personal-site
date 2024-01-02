@@ -11,7 +11,7 @@ import { SERVICES, TECH_STACK } from './constants';
 
 const Services = () => {
 	return (
-		<div>
+		<div className='min-h-screen flex flex-col justify-center'>
 			<p id='services' className='pt-16 mt-16 text-5xl my-8 text-[#928b7b]'>
 				Services.
 			</p>
@@ -32,7 +32,10 @@ const Services = () => {
 				</div>
 				<div className='mt-8 lg:ml-24 lg:mt-0'>
 					{SERVICES?.map((service: string) => (
-						<p key={service} className='text-4xl text-[#928b7b]'>
+						<p
+							key={service}
+							className='text-4xl text-[#928b7b] transition-all hover:scale-110'
+						>
 							{service}
 						</p>
 					))}
@@ -101,7 +104,10 @@ const Services = () => {
 				</div>
 				<div className='mt-16 lg:ml-24 lg:mt-0 items-left'>
 					{TECH_STACK?.map((feature: string) => (
-						<p key={feature} className='text-4xl text-[#928b7b]'>
+						<p
+							key={feature}
+							className='text-4xl text-[#928b7b]  transition-all hover:scale-110'
+						>
 							{feature}
 						</p>
 					))}

@@ -1,6 +1,9 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import GithubIcon from '@/public/icons/github-mark.svg';
+import LinkedInIcon from '@/public/icons/linkedin.svg';
+import Image from 'next/image';
 
 type NameBannerTypes = {
 	color: string;
@@ -31,9 +34,14 @@ const NameBanner = ({ color, firstLoad, styles }: NameBannerTypes) => {
 
 const HeroBanner = () => {
 	const [firstLoad, setFirstLoad] = useState(false);
+	const [hasLoaded, setHasLoaded] = useState(false);
 
 	useEffect(() => {
 		setFirstLoad(true);
+
+		setTimeout(() => {
+			setHasLoaded(true);
+		}, 900);
 	}, []);
 
 	return (
@@ -44,10 +52,31 @@ const HeroBanner = () => {
 						firstLoad ? 'scale-100' : 'scale-125'
 					} transition-all duration-700`}
 				/>
-				<div className='absolute  top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 -z-10  '>
+				<div className='relative flex flex-col justify-center -z-10 h-[96%] mx-auto '>
 					<NameBanner color='#1C1C1D' firstLoad={firstLoad} />
 					<NameBanner color='#edeae5' firstLoad={firstLoad} />
 					<NameBanner color='#1C1C1D' firstLoad={firstLoad} />
+				</div>
+				<div
+					style={{
+						opacity: !hasLoaded ? '0' : '1',
+						transition: 'all .9s',
+						visibility: !hasLoaded ? 'hidden' : 'visible',
+					}}
+					className='flex flex-row gap-8 justify-center bg-[#edeae5] w-fit mx-auto py-2 px-4 rounded-full -mt-6'
+				>
+					<Image
+						src={GithubIcon}
+						alt='GitHub Logo'
+						height={24}
+						className='hover:scale-125 transition-all'
+					/>
+					<Image
+						src={LinkedInIcon}
+						alt='GitHub Logo'
+						height={24}
+						className='hover:scale-125 transition-all'
+					/>
 				</div>
 			</div>
 		</div>
