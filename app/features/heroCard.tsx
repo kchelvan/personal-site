@@ -8,7 +8,7 @@ import HeroBanner from './HeroBanner';
 const HeroCard = () => {
 	return (
 		<div>
-			<div className='px-16 mx-auto lg:max-w-[1600px]'>
+			<div className='px-8 md:px-16 mx-auto lg:max-w-[1600px]'>
 				<HeroBanner />
 				<About />
 				<Services />
