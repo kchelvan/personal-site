@@ -6,9 +6,13 @@ import { SERVICES, TECH_STACK, TECH_STACK_TYPE } from './constants';
 
 const Services = () => {
 	const [hoveredService, setHoveredService] = useState('');
+
 	return (
 		<div className='min-h-screen flex flex-col justify-center'>
-			<p id='services' className='pt-24 mt-16 text-5xl my-8 text-[#928b7b]'>
+			<p
+				id='services'
+				className='select-none pt-24 mt-16 text-5xl my-8 text-[#928b7b]'
+			>
 				services.
 			</p>
 			<div className='grid grid-cols-1 lg:grid-cols-2'>
@@ -30,7 +34,7 @@ const Services = () => {
 					{SERVICES?.map((service: string) => (
 						<p
 							key={service}
-							className='text-4xl text-[#928b7b] transition-all hover:scale-[120%] w-fit'
+							className='select-none text-4xl text-[#928b7b] transition-all hover:scale-[120%] w-fit'
 						>
 							{service}
 						</p>
@@ -61,7 +65,7 @@ const Services = () => {
 											alt='Keshopan Chelvan'
 											src={feature?.icon}
 											height={42}
-											className={`hover:scale-150 transition-all ${
+											className={`select-none hover:scale-150 transition-all ${
 												hoveredService == feature?.label ? 'scale-150' : ''
 											}`}
 											onMouseOver={() => setHoveredService(feature?.label)}
@@ -79,7 +83,7 @@ const Services = () => {
 					{TECH_STACK?.map((feature: TECH_STACK_TYPE) => (
 						<p
 							key={feature?.label}
-							className={`text-4xl text-[#928b7b] transition-all w-fit ${
+							className={`select-none text-4xl text-[#928b7b] transition-all w-fit ${
 								hoveredService == feature?.label ? 'scale-[120%]' : ''
 							}`}
 							onMouseOver={() => setHoveredService(feature?.label)}

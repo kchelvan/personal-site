@@ -26,7 +26,7 @@ const About = () => {
 				</div>
 				<div className='h-full flex flex-col justify-between mt-8 xl:mt-0'>
 					<div className='bg-[#edeae5] xl:mx-12 py-4 px-8 lg:p-16 rounded-3xl'>
-						<p className='text-4xl my-8 xl:my-0'>ABOUT ME.</p>
+						<p className='select-none text-4xl my-8 xl:my-0'>ABOUT ME.</p>
 						<p className='text-lg sub-text mt-12 leading-loose'>
 							As an experienced senior{' '}
 							<span className='bg-[#928b7b] rounded-lg p-1 text-white'>

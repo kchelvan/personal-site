@@ -20,6 +20,9 @@ import Marble_e from '@/public/projects/marble/marble-5.webp';
 import Marble_f from '@/public/projects/marble/marble-6.webp';
 import Marble_g from '@/public/projects/marble/marble-7.webp';
 
+import JV_Home from '@/public/projects/jv-homes/jv-2.png';
+import Link from 'next/link';
+
 const PROJECT_PATHS = {
 	RPRA_HAZTRACK: [RPRA_a, RPRA_b, RPRA_c, RPRA_d, RPRA_e, RPRA_f, RPRA_g],
 	Marble: [
@@ -31,15 +34,18 @@ const PROJECT_PATHS = {
 		Marble_f,
 		Marble_g,
 	],
+	JV_Homes: [JV_Home],
 };
 
 type ProjectHeaderTypes = {
 	label: string;
+	link?: string;
 };
 
 type ProjectImagesTypes = {
 	label: string;
 	imagesArray: any[];
+	scroll?: boolean;
 };
 
 type ProjectDescriptionTypes = {
@@ -47,16 +53,23 @@ type ProjectDescriptionTypes = {
 	techStack: string[];
 };
 
-const ProjectHeader = ({ label }: ProjectHeaderTypes) => {
+const ProjectHeader = ({ label, link }: ProjectHeaderTypes) => {
 	return (
-		<div className='flex flex-row hover:cursor-pointer w-auto h-auto'>
+		<Link
+			href={link || ''}
+			className='flex flex-row hover:cursor-pointer w-auto h-auto'
+		>
 			<Image alt='RPRA HazTrack' src={Link_Icon} priority />
 			<p className='text-xl  pl-2 my-8'>{label || ''}</p>
-		</div>
+		</Link>
 	);
 };
 
-const ProjectImages = ({ label, imagesArray }: ProjectImagesTypes) => {
+const ProjectImages = ({
+	label,
+	imagesArray,
+	scroll = false,
+}: ProjectImagesTypes) => {
 	const [imageCounter, setImageCounter] = useState(0);
 
 	const api = () => {
@@ -98,7 +111,7 @@ const ProjectDescription = ({
 					<div className='flex flex-row gap-4 mt-2 flex-wrap'>
 						{techStack?.map((tech: string) => (
 							<div key={tech}>
-								<p className='text-base sub-text bg-[#edeae5] w-fit py-1 px-3 rounded-full'>
+								<p className='select-none text-base sub-text bg-[#edeae5] w-fit py-1 px-3 rounded-full hover:scale-[120%] transition-all'>
 									{tech}
 								</p>
 							</div>
@@ -113,13 +126,19 @@ const ProjectDescription = ({
 const Projects = () => {
 	return (
 		<div>
-			<p id='projects' className='text-5xl my-8 text-[#928b7b] pt-24'>
+			<p
+				id='projects'
+				className='select-none text-5xl my-8 text-[#928b7b] pt-24'
+			>
 				previous projects.
 			</p>
 			<p className='text-base my-8'>section in development.</p>
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16'>
 				<div>
-					<ProjectHeader label='RPRA HazTrack' />
+					<ProjectHeader
+						label='RPRA HazTrack'
+						link='https://play.google.com/store/apps/details?id=ca.rpra.haztrack&hl=en_CA&gl=US'
+					/>
 					<ProjectImages
 						label='RPRA HazTrack'
 						imagesArray={PROJECT_PATHS?.RPRA_HAZTRACK}
@@ -142,7 +161,10 @@ const Projects = () => {
 					/>
 				</div>
 				<div>
-					<ProjectHeader label='Marble' />
+					<ProjectHeader
+						label='Marble'
+						link='https://play.google.com/store/apps/details?id=ai.mymarble.marble&hl=en_CA&gl=US'
+					/>
 					<ProjectImages
 						label='RPRA HazTrack'
 						imagesArray={PROJECT_PATHS?.Marble}
@@ -153,14 +175,26 @@ const Projects = () => {
 					/>
 				</div>
 				<div>
-					<ProjectHeader label='JV Homes' />
+					<ProjectHeader label='JV Homes' link='https://www.jvhome.ca/' />
+					<ProjectImages
+						label='RPRA HazTrack'
+						imagesArray={PROJECT_PATHS?.JV_Homes}
+						scroll
+					/>
 					<ProjectDescription
 						description='Details coming soon!'
-						techStack={['NextJS', 'Vercel', 'Prisma', 'Tailwind', 'TypeScript']}
+						techStack={[
+							'NextJS',
+							'Vercel',
+							'Prisma',
+							'Tailwind',
+							'TypeScript',
+							'Google Maps API',
+						]}
 					/>
 				</div>
 				<div>
-					<ProjectHeader label='GFL SMS' />
+					<ProjectHeader label='GFL SMS' link='' />
 					<ProjectDescription
 						description='Details coming soon!'
 						techStack={['React', 'CSS', 'JavaScript']}

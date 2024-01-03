@@ -35,7 +35,10 @@ const Contact = () => {
 				return (
 					<Form>
 						<div className='px-16 mx-auto lg:max-w-[1600px] py-16'>
-							<p id='contact' className='text-5xl my-8 text-[#928b7b]'>
+							<p
+								id='contact'
+								className='select-none text-5xl my-8 text-[#928b7b]'
+							>
 								contact.
 							</p>
 							<div className='grid grid-cols-2 gap-4 mb-4'>

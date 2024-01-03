@@ -36,7 +36,7 @@ const Button = ({
 				onClick={onClick}
 			>
 				<p
-					className={`rounded transition sub-text text-sm md:text-lg mb-0 bg-[#928b7b] text-white hover:bg-[#c8c6bc] hover:text-black py-2`}
+					className={`select-none rounded transition sub-text text-sm md:text-lg mb-0 bg-[#928b7b] text-white hover:bg-[#c8c6bc] hover:text-black py-2`}
 				>
 					{label}
 				</p>

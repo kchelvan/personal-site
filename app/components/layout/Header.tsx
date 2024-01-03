@@ -102,7 +102,7 @@ const Header = () => {
 		>
 			<div className='flex flex-row py-4 justify-between items-center bg-white'>
 				<Link
-					className='sub-text text-lg px-12 hover:cursor-pointer'
+					className='select-none sub-text text-lg px-12 hover:cursor-pointer'
 					href={'/#hero'}
 				>
 					PORTFOLIO
@@ -112,7 +112,7 @@ const Header = () => {
 						{ROUTES?.map((route) => (
 							<Link
 								key={route.route}
-								className='sub-text text-lg px-8 hover:scale-105 transition-all hover:underline'
+								className='select-none sub-text text-lg px-8 hover:scale-105 transition-all hover:underline'
 								href={route.route}
 							>
 								{route.label}

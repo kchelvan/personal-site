@@ -17,7 +17,7 @@ const NameBanner = ({ color, firstLoad, styles }: NameBannerTypes) => {
 				visibility: !firstLoad ? 'hidden' : 'visible',
 				color: color,
 			}}
-			className={`${
+			className={`select-none ${
 				firstLoad
 					? 'text-[34pt] sm:text-[47pt] md:text-[64pt] lg:text-[90pt] xl:text-[120pt]'
 					: 'text-[24pt] sm:text-[27pt] md:text-[44pt] lg:text-[70pt] xl:text-[100pt]'
@@ -46,14 +46,15 @@ const HeroBanner = () => {
 		<div>
 			<div className='h-[100lvh] xl:h-[100dvh] pt-4'>
 				<div
-					className={`bg-[#c8c6bc] transform w-[60%] h-[35%] md:w-2/3 md:h-1/2 lg:w-3/4 lg:h-3/5 xl:w-[1024px] xl:h-5/6 absolute -z-10  top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-2xl ${
+					className={`bg-[#c8c6bc] transform w-[60%] h-[35%] md:w-2/3 md:h-1/2 lg:w-3/4 lg:h-3/5 xl:w-[1024px] xl:h-5/6 relative -z-10  top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-2xl ${
 						firstLoad ? 'scale-100' : 'scale-125'
 					} transition-all duration-700`}
-				/>
-				<div className='relative flex flex-col justify-center -z-10 h-[96%] w-full'>
-					<NameBanner color='#1C1C1D' firstLoad={firstLoad} />
-					<NameBanner color='#edeae5' firstLoad={firstLoad} />
-					<NameBanner color='#1C1C1D' firstLoad={firstLoad} />
+				>
+					<div className='relative flex flex-col justify-center -z-10 w-full h-full'>
+						<NameBanner color='#1C1C1D' firstLoad={firstLoad} />
+						<NameBanner color='#edeae5' firstLoad={firstLoad} />
+						<NameBanner color='#1C1C1D' firstLoad={firstLoad} />
+					</div>
 				</div>
 				<div
 					style={{
@@ -61,26 +62,28 @@ const HeroBanner = () => {
 						transition: 'all .9s',
 						visibility: !hasLoaded ? 'hidden' : 'visible',
 					}}
-					className='flex flex-row gap-8 justify-center bg-[#edeae5] w-fit mx-auto py-2 px-4 rounded-full -mt-6'
+					className='absolute bottom-2 left-1/2 -translate-x-1/2'
 				>
-					<Link href={'https://github.com/kchelvan'}>
-						<Image
-							src={GithubIcon}
-							alt='GitHub Logo'
-							height={24}
-							className='hover:scale-125 transition-all hover:cursor-pointer'
-						/>
-					</Link>
-					<Link href={'https://www.linkedin.com/in/keshopan-chelvan/'}>
-						<Image
-							src={LinkedInIcon}
-							alt='GitHub Logo'
-							height={24}
-							className='hover:scale-125 transition-all hover:cursor-pointer'
-						/>
-					</Link>
+					<div className='flex flex-row gap-8 justify-center bg-[#edeae5] w-fit mx-auto py-2 px-4 rounded-full'>
+						<Link href={'https://github.com/kchelvan'}>
+							<Image
+								src={GithubIcon}
+								alt='GitHub Logo'
+								height={24}
+								className='select-none hover:scale-125 transition-all hover:cursor-pointer'
+							/>
+						</Link>
+						<Link href={'https://www.linkedin.com/in/keshopan-chelvan/'}>
+							<Image
+								src={LinkedInIcon}
+								alt='GitHub Logo'
+								height={24}
+								className='select-none hover:scale-125 transition-all hover:cursor-pointer'
+							/>
+						</Link>
+					</div>
+					<Divider />
 				</div>
-				<Divider />
 			</div>
 		</div>
 	);
