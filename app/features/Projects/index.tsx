@@ -95,7 +95,15 @@ const ProjectDescription = ({
 			{techStack?.length > 0 ? (
 				<div>
 					<p className='text-lg mt-8'>Tech Stack.</p>
-					<p className='text-base sub-text'>{techStack?.join(' ')}</p>
+					<div className='flex flex-row gap-4 mt-2'>
+						{techStack?.map((tech: string) => (
+							<div>
+								<p className='text-base sub-text bg-[#edeae5] w-fit py-1 px-3 rounded-full'>
+									{tech}
+								</p>
+							</div>
+						))}
+					</div>
 				</div>
 			) : null}
 		</div>
@@ -105,9 +113,10 @@ const ProjectDescription = ({
 const Projects = () => {
 	return (
 		<div>
-			<p id='projects' className='text-5xl my-8 text-[#928b7b]'>
+			<p id='projects' className='text-5xl my-8 text-[#928b7b] pt-24'>
 				previous projects.
 			</p>
+			<p className='text-base my-8'>section in development.</p>
 			<div className='grid grid-cols-3 gap-16'>
 				<div>
 					<ProjectHeader label='RPRA HazTrack' />
@@ -116,7 +125,7 @@ const Projects = () => {
 						imagesArray={PROJECT_PATHS?.RPRA_HAZTRACK}
 					/>
 					<ProjectDescription
-						description="In this project, I led and mentored a team of developers to build a
+						description="Keshopan acted as the lead mobile developer for this project, where he worked with and mentored a team of developers to build a
       React Native-based application called RPRA HazTrack from Inception to
       Production and Maintenance for both iOS and Android. RPRA HazTrack
       enables generators, carriers, and receivers to create, update, and
@@ -129,7 +138,7 @@ const Projects = () => {
       Ontario's manifesting process, including signatures, refusals and
       corrections, can be accomplished through the app. The final product was
       one the client was very content with."
-						techStack={['React Native', 'Salesforce']}
+						techStack={['React Native', 'Salesforce', 'JavaScript']}
 					/>
 				</div>
 				<div>
@@ -139,22 +148,22 @@ const Projects = () => {
 						imagesArray={PROJECT_PATHS?.Marble}
 					/>
 					<ProjectDescription
-						description='In this project, Keshopan acted as the senior front-end developer, where he worked with and mentored a team of front-end developed to develop a baby development tracker called Marble using Artificial Intelligence. He collaborated with a team of backend developers, data analysts, designers, and business management. The Marble app is a novel tool for new parents to use to track their baby’s development in-between doctor visits. The app gives parents of newborn infants many advantages, including: tracking for feedings, sleeping, diapers, and growth across all developmental milestones: physical, gross motor, communication, cognitive, social, and emotional.'
-						techStack={['React Native']}
+						description='Keshopan acted as the senior front-end developer for the Marble project, where he worked with and mentored a team of front-end developers to build a baby development tracker called Marble using Artificial Intelligence. He collaborated with a team of backend developers, data analysts, designers, and business management. The Marble app is a novel tool for new parents to use to track their baby’s development in-between doctor visits. The app gives parents of newborn infants many advantages, including: tracking for feedings, sleeping, diapers, and growth across all developmental milestones: physical, gross motor, communication, cognitive, social, and emotional.'
+						techStack={['React Native', 'JavaScript']}
 					/>
 				</div>
 				<div>
 					<ProjectHeader label='JV Homes' />
 					<ProjectDescription
 						description='Details coming soon!'
-						techStack={[]}
+						techStack={['NextJS', 'Vercel', 'Prisma', 'Tailwind', 'TypeScript']}
 					/>
 				</div>
 				<div>
 					<ProjectHeader label='GFL SMS' />
 					<ProjectDescription
 						description='Details coming soon!'
-						techStack={[]}
+						techStack={['React', 'CSS', 'JavaScript']}
 					/>
 				</div>
 			</div>
