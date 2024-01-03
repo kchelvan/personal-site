@@ -5,12 +5,7 @@ import GithubIcon from '@/public/icons/github-mark.svg';
 import LinkedInIcon from '@/public/icons/linkedin.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-
-type NameBannerTypes = {
-	color: string;
-	firstLoad: boolean;
-	styles?: string;
-};
+import { NameBannerTypes } from './types';
 
 const NameBanner = ({ color, firstLoad, styles }: NameBannerTypes) => {
 	return (

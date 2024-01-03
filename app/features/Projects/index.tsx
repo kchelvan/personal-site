@@ -106,7 +106,7 @@ const Projects = () => {
 	return (
 		<div>
 			<p id='projects' className='text-5xl my-8 text-[#928b7b]'>
-				Previous Projects.
+				previous projects.
 			</p>
 			<div className='grid grid-cols-3 gap-16'>
 				<div>

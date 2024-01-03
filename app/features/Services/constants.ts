@@ -1,3 +1,12 @@
+import react from '@/public/logo/react.png';
+import nextJS from '@/public/logo/nextJs.png';
+import tailwind from '@/public/logo/tailwind.png';
+import javascript from '@/public/logo/javascript.png';
+import typescript from '@/public/logo/typescript.png';
+import vercel from '@/public/logo/vercel.png';
+import prisma from '@/public/logo/prisma.png';
+import salesforce from '@/public/logo/salesforce.png';
+
 export const SERVICES = [
 	'Web Development',
 	'Artificial Intelligence',
@@ -6,13 +15,18 @@ export const SERVICES = [
 ];
 
 export const TECH_STACK = [
-	'React',
-	'React Native',
-	'NextJS',
-	'Tailwind CSS',
-	'Javascript',
-	'Typescript',
-	'Prisma',
-	'Vercel',
-	'Salesforce',
+	{ label: 'React', icon: react },
+	{ label: 'React Native', icon: null },
+	{ label: 'NextJS', icon: nextJS },
+	{ label: 'Tailwind CSS', icon: tailwind },
+	{ label: 'Javascript', icon: javascript },
+	{ label: 'Typescript', icon: typescript },
+	{ label: 'Prisma', icon: prisma },
+	{ label: 'Vercel', icon: vercel },
+	{ label: 'Salesforce', icon: salesforce },
 ];
+
+export type TECH_STACK_TYPE = {
+	label: string;
+	icon: any;
+};

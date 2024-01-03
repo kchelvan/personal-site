@@ -5,8 +5,7 @@ const TextInput = ({
 	containerStyles,
 	type,
 	required,
-	onChange,
-	onBlur,
+	setFieldValue,
 	containerType,
 	placeholder,
 	value,
@@ -18,8 +17,7 @@ const TextInput = ({
 	containerStyles?: any;
 	type?: string;
 	required?: boolean;
-	onChange?: any;
-	onBlur?: any;
+	setFieldValue?: any;
 	containerType?: string;
 	placeholder?: string;
 	value?: string;
@@ -53,6 +51,9 @@ const TextInput = ({
 						errorMessage ? 'border-red-600' : ''
 					}`}
 					rows={4}
+					onChange={(e: any) => {
+						setFieldValue(id, e.target.value);
+					}}
 					style={{ resize: 'none' }}
 					placeholder={placeholder}
 					value={value}
@@ -64,6 +65,9 @@ const TextInput = ({
 					className={`sub-text ${textContainerStyle} mb-0 ${
 						errorMessage ? 'border-red-600  mb-1' : ''
 					}`}
+					onChange={(e: any) => {
+						setFieldValue(id, e.target.value);
+					}}
 					placeholder={placeholder}
 					value={value}
 				/>

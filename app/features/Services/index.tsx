@@ -1,19 +1,15 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
-import react from '@/public/logo/react.png';
-import tailwind from '@/public/logo/tailwind.png';
-import javascript from '@/public/logo/javascript.png';
-import typescript from '@/public/logo/typescript.png';
-import vercel from '@/public/logo/vercel.png';
-import prisma from '@/public/logo/prisma.png';
-import salesforce from '@/public/logo/salesforce.png';
-import { SERVICES, TECH_STACK } from './constants';
+import { SERVICES, TECH_STACK, TECH_STACK_TYPE } from './constants';
 
 const Services = () => {
+	const [hoveredService, setHoveredService] = useState('');
 	return (
 		<div className='min-h-screen flex flex-col justify-center'>
 			<p id='services' className='pt-16 mt-16 text-5xl my-8 text-[#928b7b]'>
-				Services.
+				services.
 			</p>
 			<div className='grid grid-cols-1 lg:grid-cols-2'>
 				<div>
@@ -57,58 +53,39 @@ const Services = () => {
 					<div>
 						<div className='w-5/6 mx-auto h-[1pt] bg-black my-8' />
 						<div className='flex flex-row gap-6 lg:px-8 flex-wrap justify-center '>
-							<Image
-								alt='Keshopan Chelvan'
-								src={react}
-								height={42}
-								className='hover:scale-150 transition-all'
-							/>
-							<Image
-								alt='Keshopan Chelvan'
-								src={tailwind}
-								height={42}
-								className='hover:scale-150 transition-all'
-							/>
-							<Image
-								alt='Keshopan Chelvan'
-								src={javascript}
-								height={42}
-								className='hover:scale-150 transition-all'
-							/>
-							<Image
-								alt='Keshopan Chelvan'
-								src={typescript}
-								height={42}
-								className='hover:scale-150 transition-all'
-							/>
-							<Image
-								alt='Keshopan Chelvan'
-								src={vercel}
-								height={42}
-								className='hover:scale-150 transition-all'
-							/>
-							<Image
-								alt='Keshopan Chelvan'
-								src={prisma}
-								height={42}
-								className='hover:scale-150 transition-all'
-							/>
-							<Image
-								alt='Keshopan Chelvan'
-								src={salesforce}
-								height={42}
-								className='hover:scale-150 transition-all'
-							/>
+							{TECH_STACK?.map((feature: TECH_STACK_TYPE) => {
+								if (!!feature?.icon) {
+									return (
+										<Image
+											key={`${feature?.label} icon`}
+											alt='Keshopan Chelvan'
+											src={feature?.icon}
+											height={42}
+											className={`hover:scale-150 transition-all ${
+												hoveredService == feature?.label ? 'scale-150' : ''
+											}`}
+											onMouseOver={() => setHoveredService(feature?.label)}
+											onMouseLeave={() => setHoveredService('')}
+										/>
+									);
+								} else {
+									return null;
+								}
+							})}
 						</div>
 					</div>
 				</div>
 				<div className='mt-16 lg:ml-24 lg:mt-0 items-left'>
-					{TECH_STACK?.map((feature: string) => (
+					{TECH_STACK?.map((feature: TECH_STACK_TYPE) => (
 						<p
-							key={feature}
-							className='text-4xl text-[#928b7b] transition-all hover:scale-[120%] w-fit'
+							key={feature?.label}
+							className={`text-4xl text-[#928b7b] transition-all w-fit ${
+								hoveredService == feature?.label ? 'scale-[120%]' : ''
+							}`}
+							onMouseOver={() => setHoveredService(feature?.label)}
+							onMouseLeave={() => setHoveredService('')}
 						>
-							{feature}
+							{feature?.label}
 						</p>
 					))}
 				</div>
