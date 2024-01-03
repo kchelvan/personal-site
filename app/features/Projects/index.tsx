@@ -97,7 +97,7 @@ const ProjectDescription = ({
 					<p className='text-lg mt-8'>Tech Stack.</p>
 					<div className='flex flex-row gap-4 mt-2'>
 						{techStack?.map((tech: string) => (
-							<div>
+							<div key={tech}>
 								<p className='text-base sub-text bg-[#edeae5] w-fit py-1 px-3 rounded-full'>
 									{tech}
 								</p>
