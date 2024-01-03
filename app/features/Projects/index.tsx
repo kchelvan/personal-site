@@ -95,7 +95,7 @@ const ProjectDescription = ({
 			{techStack?.length > 0 ? (
 				<div>
 					<p className='text-lg mt-8'>Tech Stack.</p>
-					<div className='flex flex-row gap-4 mt-2'>
+					<div className='flex flex-row gap-4 mt-2 flex-wrap'>
 						{techStack?.map((tech: string) => (
 							<div key={tech}>
 								<p className='text-base sub-text bg-[#edeae5] w-fit py-1 px-3 rounded-full'>
@@ -117,7 +117,7 @@ const Projects = () => {
 				previous projects.
 			</p>
 			<p className='text-base my-8'>section in development.</p>
-			<div className='grid grid-cols-3 gap-16'>
+			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16'>
 				<div>
 					<ProjectHeader label='RPRA HazTrack' />
 					<ProjectImages
