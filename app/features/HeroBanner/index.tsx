@@ -6,6 +6,7 @@ import LinkedInIcon from '@/public/icons/linkedin.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NameBannerTypes } from './types';
+import Divider from '@/app/components/ui/Divider';
 
 const NameBanner = ({ color, firstLoad, styles }: NameBannerTypes) => {
 	return (
@@ -41,7 +42,7 @@ const HeroBanner = () => {
 
 	return (
 		<div>
-			<div className='h-[100dvh] pt-4'>
+			<div className='h-[100lvh] xl:h-[100dvh] pt-4'>
 				<div
 					className={`bg-[#c8c6bc] transform w-2/3 h-2/5 md:w-2/3 md:h-1/2 lg:w-3/4 lg:h-3/5 xl:w-[1024px] xl:h-5/6 absolute -z-10  top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-2xl ${
 						firstLoad ? 'scale-100' : 'scale-125'
@@ -77,9 +78,7 @@ const HeroBanner = () => {
 						/>
 					</Link>
 				</div>
-				<div className='flex justify-center mt-16 lg:mt-2'>
-					<div className='h-1 w-10/12  lg:w-12 bg-[#edeae5] rounded-full self-center' />
-				</div>
+				<Divider />
 			</div>
 		</div>
 	);
