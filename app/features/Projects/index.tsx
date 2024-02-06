@@ -21,6 +21,9 @@ import Marble_f from '@/public/projects/marble/marble-6.webp';
 import Marble_g from '@/public/projects/marble/marble-7.webp';
 
 import JV_Home from '@/public/projects/jv-homes/jv-2.png';
+
+import RKS_Hero from '@/public/projects/rks/hero.png';
+
 import Link from 'next/link';
 
 const PROJECT_PATHS = {
@@ -35,6 +38,7 @@ const PROJECT_PATHS = {
 		Marble_g,
 	],
 	JV_Homes: [JV_Home],
+	RKS: [RKS_Hero],
 };
 
 type ProjectHeaderTypes = {
@@ -136,6 +140,47 @@ const Projects = () => {
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16'>
 				<div>
 					<ProjectHeader
+						label='RKS Saloon'
+						link='https://rks-web.vercel.app/'
+					/>
+					<ProjectImages
+						label='RKS Saloon'
+						imagesArray={PROJECT_PATHS?.RKS}
+						scroll
+					/>
+					<ProjectDescription
+						description='Details coming soon!'
+						techStack={[
+							'React',
+							'NextJS',
+							'TypeScript',
+							'AWS',
+							'Vercel',
+							'JavaScript',
+						]}
+					/>
+				</div>
+				<div>
+					<ProjectHeader label='JV Homes' link='https://www.jvhome.ca/' />
+					<ProjectImages
+						label='RPRA HazTrack'
+						imagesArray={PROJECT_PATHS?.JV_Homes}
+						scroll
+					/>
+					<ProjectDescription
+						description='Details coming soon!'
+						techStack={[
+							'NextJS',
+							'Vercel',
+							'Prisma',
+							'Tailwind',
+							'TypeScript',
+							'Google Maps API',
+						]}
+					/>
+				</div>
+				<div>
+					<ProjectHeader
 						label='RPRA HazTrack'
 						link='https://play.google.com/store/apps/details?id=ca.rpra.haztrack&hl=en_CA&gl=US'
 					/>
@@ -172,25 +217,6 @@ const Projects = () => {
 					<ProjectDescription
 						description='Keshopan acted as the senior front-end developer for the Marble project, where he worked with and mentored a team of front-end developers to build a baby development tracker called Marble using Artificial Intelligence. He collaborated with a team of backend developers, data analysts, designers, and business management. The Marble app is a novel tool for new parents to use to track their baby’s development in-between doctor visits. The app gives parents of newborn infants many advantages, including: tracking for feedings, sleeping, diapers, and growth across all developmental milestones: physical, gross motor, communication, cognitive, social, and emotional.'
 						techStack={['React Native', 'JavaScript']}
-					/>
-				</div>
-				<div>
-					<ProjectHeader label='JV Homes' link='https://www.jvhome.ca/' />
-					<ProjectImages
-						label='RPRA HazTrack'
-						imagesArray={PROJECT_PATHS?.JV_Homes}
-						scroll
-					/>
-					<ProjectDescription
-						description='Details coming soon!'
-						techStack={[
-							'NextJS',
-							'Vercel',
-							'Prisma',
-							'Tailwind',
-							'TypeScript',
-							'Google Maps API',
-						]}
 					/>
 				</div>
 				<div>

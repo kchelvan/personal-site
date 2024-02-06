@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Image from 'next/image';
-import profilePic from '@/public/images/profile_image.jpg';
+import profilePic from '@/public/images/profile_image.webp';
 
 const About = () => {
 	return (
