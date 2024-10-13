@@ -24,6 +24,10 @@ import JV_Home from '@/public/projects/jv-homes/jv-2.png';
 
 import RKS_Hero from '@/public/projects/rks/hero.png';
 
+import Davids_Bridal_a from '@/public/projects/davids-bridal/bridal-mobile-plp.png';
+import Davids_Bridal_b from '@/public/projects/davids-bridal/db_appointments_a.png';
+import Davids_Bridal_c from '@/public/projects/davids-bridal/db_appointments_b.png';
+
 import Link from 'next/link';
 
 const PROJECT_PATHS = {
@@ -39,6 +43,7 @@ const PROJECT_PATHS = {
 	],
 	JV_Homes: [JV_Home],
 	RKS: [RKS_Hero],
+	Davids_Bridal: [Davids_Bridal_a, Davids_Bridal_b, Davids_Bridal_c],
 };
 
 type ProjectHeaderTypes = {
@@ -161,6 +166,35 @@ const Projects = () => {
 					/>
 				</div>
 				<div>
+					<ProjectHeader
+						label="David's Bridal"
+						link='https://www.davidsbridal.com/'
+					/>
+					<ProjectImages
+						label="David's Bridal"
+						imagesArray={PROJECT_PATHS?.Davids_Bridal}
+					/>
+					<ProjectDescription
+						description={`Keshopan developed NextJS-based web applications using technologies like React, GraphQL, NextJS, Styled Components, TypeScript, and Magento. He created reusable React components to improve the user interface and maintain code quality. By working with backend developers, Keshopan integrated GraphQL APIs to ensure a smooth connection between frontend components and Magento-powered e-commerce platforms. He used Styled Components to build consistent, pixel-perfect UI elements based on Figma designs and leveraged TypeScript to improve code reliability and scalability.
+
+Keshopan collaborated with UI/UX designers, product managers, and backend developers to deliver integrated solutions. He optimized application performance through techniques like code splitting and image optimization, ensuring compatibility across different browsers and devices using responsive design principles.
+
+Keshopan participated in code reviews, provided feedback to the team, and contributed to sprint planning and daily stand-ups. He also documented frontend components, APIs, and integration processes to support team collaboration. Additionally, Keshopan conducted thorough testing and debugging to ensure the delivery of high-quality, bug-free code.`}
+						techStack={[
+							'React',
+							'NextJS',
+							'Javascript',
+							'Typescript',
+							'e-commerce',
+							'JIRA',
+							'Agile/Scrum',
+							'CSS',
+							'GraphQL',
+							'Magento',
+						]}
+					/>
+				</div>
+				<div>
 					<ProjectHeader label='JV Homes' link='https://www.jvhome.ca/' />
 					<ProjectImages
 						label='RPRA HazTrack'
@@ -177,32 +211,6 @@ const Projects = () => {
 							'TypeScript',
 							'Google Maps API',
 						]}
-					/>
-				</div>
-				<div>
-					<ProjectHeader
-						label='RPRA HazTrack'
-						link='https://play.google.com/store/apps/details?id=ca.rpra.haztrack&hl=en_CA&gl=US'
-					/>
-					<ProjectImages
-						label='RPRA HazTrack'
-						imagesArray={PROJECT_PATHS?.RPRA_HAZTRACK}
-					/>
-					<ProjectDescription
-						description="Keshopan acted as the lead mobile developer for this project, where he worked with and mentored a team of developers to build a
-      React Native-based application called RPRA HazTrack from Inception to
-      Production and Maintenance for both iOS and Android. RPRA HazTrack
-      enables generators, carriers, and receivers to create, update, and
-      complete manifests for the movement of hazardous and liquid industrial
-      wastes in compliance with Ontario's manifesting requirements under
-      Ontario Regulation 347. The app provides the ability for users to manage
-      and track manifests for Ontario's hazardous waste program easily
-      and effectively, and seamlessly integrate their manifest content with
-      the Hazardous Waste Program Registry. All activities required for
-      Ontario's manifesting process, including signatures, refusals and
-      corrections, can be accomplished through the app. The final product was
-      one the client was very content with."
-						techStack={['React Native', 'Salesforce', 'JavaScript']}
 					/>
 				</div>
 				<div>
