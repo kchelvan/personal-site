@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useMediaQuery, useTheme } from '@mui/material';
 
 const ROUTES = [
 	{
@@ -78,9 +77,7 @@ const HamburgerMenu = () => {
 };
 
 const Header = () => {
-	const theme = useTheme();
 	const [hasLoaded, setHasLoaded] = useState(false);
-	const isMobileSize = useMediaQuery(theme.breakpoints.down('md'));
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -107,8 +104,7 @@ const Header = () => {
 				>
 					PORTFOLIO
 				</Link>
-				{!isMobileSize ? (
-					<div className='flex flew-row mr-8'>
+					<div className='hidden flew-row mr-8 @media md:flex'>
 						{ROUTES?.map((route) => (
 							<Link
 								key={route.route}
@@ -119,9 +115,10 @@ const Header = () => {
 							</Link>
 						))}
 					</div>
-				) : (
+					<div className='flex flew-row mr-8 md:hidden'>
 					<HamburgerMenu />
-				)}
+
+					</div>
 			</div>
 			<div>
 				<div className='w-full h-[1pt] bg-black mb-16' />

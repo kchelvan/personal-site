@@ -1,9 +1,9 @@
 import React from 'react';
-import About from './About';
-import Services from './Services';
-import Projects from './Projects';
-import Contact from './Contact';
-import HeroBanner from './HeroBanner';
+import About from './about';
+import Services from './services';
+import Projects from './projects';
+import Contact from './contact';
+import HeroBanner from './hero-banner';
 
 const HeroCard = () => {
 	return (

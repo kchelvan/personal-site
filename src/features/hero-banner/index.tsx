@@ -6,7 +6,7 @@ import LinkedInIcon from '@/public/icons/linkedin.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NameBannerTypes } from './types';
-import Divider from '@/app/components/ui/Divider';
+import Divider from '@/components/ui/divider';
 
 const NameBanner = ({ color, firstLoad, styles }: NameBannerTypes) => {
 	return (
