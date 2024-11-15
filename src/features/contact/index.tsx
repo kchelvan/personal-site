@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import Button from '@/app/components/ui/Button';
-import TextInput from '@/app/components/ui/TextInput';
+import Button from '@/components/ui/button';
+import TextInput from '@/components/ui/text-input';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { errorNotification, successNotification } from '@/app/utils/toast';
+import { errorNotification, successNotification } from '@/utils/toast';
 import { initialValues } from './types';
 
 const Contact = () => {

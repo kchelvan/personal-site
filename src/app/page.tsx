@@ -1,4 +1,4 @@
-import HeroCard from './features/heroCard';
+import HeroCard from '@/features/hero-card';
 
 export default function Home() {
 	return (

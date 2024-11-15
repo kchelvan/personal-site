@@ -1,5 +1,5 @@
 import { Resend } from 'resend';
-import { EmailTemplate } from '@/app/components/layout/Email';
+import { EmailTemplate } from '@/components/layout/email';
 import { NextRequest } from 'next/server';
 
 const resend = new Resend(process.env.RESEND_API_KEY);

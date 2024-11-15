@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Anton } from 'next/font/google';
 import './globals.css';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
 import { Toaster } from 'react-hot-toast';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
