@@ -7,12 +7,12 @@ const ResearchPage = () => {
 	const [selectedPaper, setSelectedPaper] = useState('');
 	return (
 		<div className='mt-24 mb-8'>
-			<div className='flex w-full text-center text-2xl justify-center mb-8'>
+			<div className='flex w-full text-center text-4xl justify-center mt-24'>
 				Welcome to my research portfolio.
 			</div>
 			<div className='flex w-full justify-center'>
 				<div className='flex flex-col w-4/5 md:w-2/3'>
-					<p className='sub-text '>
+					<p className='sub-text mt-8 text-lg'>
 						My work focuses on the early detection of fake news using artificial
 						intelligence, language learning models, and machine learning. I
 						leverage linguistic and psychological characteristics from text to
@@ -26,7 +26,7 @@ const ResearchPage = () => {
 						and presentation skills. Explore my findings, methodologies, and
 						contributions to the ongoing efforts to combat fake news.
 					</p>
-					<div className='flex flex-row gap-8 md:gap-16 w-full justify-center mt-8'>
+					<div className='flex flex-row gap-8 md:gap-16 w-full justify-center mt-8 md:text-xl'>
 						{PAPERS.map((paper) => (
 							<button
 								key={paper.label}

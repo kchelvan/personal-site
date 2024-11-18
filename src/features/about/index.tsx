@@ -5,14 +5,9 @@ import profilePic from '@/public/images/profile_image.webp';
 
 const About = () => {
 	return (
-		<div id='about' className='min-h-screen flex flex-col justify-center pt-32'>
-			<p className='text-4xl lg:text-6xl leading-normal'>
-				I am proficient in creating reusable React-based components,
-				streamlining front-end development to bring the client&apos;s vision to
-				life.
-			</p>
+		<div id='about' className='min-h-screen flex flex-col justify-center'>
 			<div className='grid grid-col-1 xl:grid-cols-2 mt-16'>
-				<div className='relative w-full h-[256px] xl:w-full xl:h-full'>
+				<div className='relative w-full h-[384px] xl:w-full sm:h-[512px] xl:h-full'>
 					<Image
 						alt='Keshopan Chelvan'
 						src={profilePic}

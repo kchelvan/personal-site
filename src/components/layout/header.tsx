@@ -10,16 +10,12 @@ const ROUTES = [
 		route: '/#about',
 	},
 	{
-		label: 'SERVICES',
-		route: '/#services',
+		label: 'PROFESSION',
+		route: '/profession',
 	},
 	{
 		label: 'RESUME',
 		route: '/resume',
-	},
-	{
-		label: 'PROJECTS',
-		route: '/#projects',
 	},
 	{
 		label: 'RESEARCH',
@@ -118,7 +114,7 @@ const Header = () => {
 				>
 					PORTFOLIO
 				</Link>
-				<div className='hidden flew-row mr-8 @media md:flex'>
+				<div className='hidden flew-row mr-8 lg:flex'>
 					{ROUTES?.map((route) => (
 						<Link
 							key={route.route}
@@ -129,7 +125,7 @@ const Header = () => {
 						</Link>
 					))}
 				</div>
-				<div className='flex flew-row mr-8 md:hidden'>
+				<div className='flex flew-row mr-8 lg:hidden'>
 					<HamburgerMenu />
 				</div>
 			</div>
