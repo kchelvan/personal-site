@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const ROUTES = [
 	{
@@ -13,8 +14,16 @@ const ROUTES = [
 		route: '/#services',
 	},
 	{
+		label: 'RESUME',
+		route: '/resume',
+	},
+	{
 		label: 'PROJECTS',
 		route: '/#projects',
+	},
+	{
+		label: 'PHOTOGRAPHY',
+		route: '/photography',
 	},
 	{
 		label: 'CONTACT',
@@ -77,7 +86,8 @@ const HamburgerMenu = () => {
 };
 
 const Header = () => {
-	const [hasLoaded, setHasLoaded] = useState(false);
+	const path = usePathname();
+	const [hasLoaded, setHasLoaded] = useState(path != '/');
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -104,21 +114,20 @@ const Header = () => {
 				>
 					PORTFOLIO
 				</Link>
-					<div className='hidden flew-row mr-8 @media md:flex'>
-						{ROUTES?.map((route) => (
-							<Link
-								key={route.route}
-								className='select-none sub-text text-lg px-8 hover:scale-105 transition-all hover:underline'
-								href={route.route}
-							>
-								{route.label}
-							</Link>
-						))}
-					</div>
-					<div className='flex flew-row mr-8 md:hidden'>
+				<div className='hidden flew-row mr-8 @media md:flex'>
+					{ROUTES?.map((route) => (
+						<Link
+							key={route.route}
+							className='select-none sub-text text-lg px-8 hover:scale-105 transition-all hover:underline'
+							href={route.route}
+						>
+							{route.label}
+						</Link>
+					))}
+				</div>
+				<div className='flex flew-row mr-8 md:hidden'>
 					<HamburgerMenu />
-
-					</div>
+				</div>
 			</div>
 			<div>
 				<div className='w-full h-[1pt] bg-black mb-16' />

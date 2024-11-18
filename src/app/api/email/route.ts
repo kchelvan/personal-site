@@ -17,7 +17,6 @@ export async function POST(request: NextRequest) {
 				message: formValues.message,
 			}),
 		} as any);
-
 		return Response.json(data);
 	} catch (error) {
 		return Response.json({ error });

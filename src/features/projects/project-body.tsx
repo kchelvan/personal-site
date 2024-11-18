@@ -28,7 +28,7 @@ export const ProjectBody = ({
 	return (
 		<div
 			className={`col-span-1 md:col-span-2 ${
-				index % 2 == 0 ? 'md:order-last' : 'md:order-first'
+				index % 2 == 0 ? 'lg:order-last' : 'lg:order-first'
 			}`}
 		>
 			<ProjectHeader index={index} label={label} />
