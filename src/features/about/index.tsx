@@ -64,7 +64,11 @@ const About = () => {
 							<br />
 							During his spare time, you&apos;ll find him exploring the city and
 							capturing snapshots. He has worked on several photoshoots, which
-							can be viewed on his portfolio (Page coming Soon).
+							can be viewed on his{' '}
+							<a className='underline' href='/photography'>
+								portfolio
+							</a>
+							.
 						</p>
 					</div>
 				</div>
