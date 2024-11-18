@@ -33,10 +33,7 @@ export const Project = ({
 const Projects = () => {
 	return (
 		<div>
-			<p
-				id='projects'
-				className='select-none text-5xl my-8 text-[#928b7b] pt-24'
-			>
+			<p id='projects' className='select-none text-5xl my-8 text-[#928b7b] '>
 				previous projects.
 			</p>
 			<div className='flex flex-col gap-16 md:gap-12'>

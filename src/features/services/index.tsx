@@ -8,11 +8,8 @@ const Services = () => {
 	const [hoveredService, setHoveredService] = useState('');
 
 	return (
-		<div className='min-h-screen flex flex-col justify-center'>
-			<p
-				id='services'
-				className='select-none pt-24 mt-16 text-5xl my-8 text-[#928b7b]'
-			>
+		<div className='flex flex-col justify-center'>
+			<p id='services' className='select-none text-5xl my-8 text-[#928b7b]'>
 				services.
 			</p>
 			<div className='grid grid-cols-1 lg:grid-cols-2'>
