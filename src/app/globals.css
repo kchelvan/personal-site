@@ -49,3 +49,9 @@ mark {
 .mark-teal {
 	@apply bg-teal-500  text-white;
 }
+
+@layer base {
+	html {
+		@apply scroll-smooth
+	}
+}
