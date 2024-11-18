@@ -22,6 +22,10 @@ const ROUTES = [
 		route: '/#projects',
 	},
 	{
+		label: 'RESEARCH',
+		route: '/research',
+	},
+	{
 		label: 'PHOTOGRAPHY',
 		route: '/photography',
 	},
