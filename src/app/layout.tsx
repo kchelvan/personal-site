@@ -14,7 +14,7 @@ const anton = Anton({
 
 export const metadata: Metadata = {
 	title: "Keshopan's Portfolio",
-	description: 'Photographer and IT Developer',
+	description: 'Photographer and Software Developer',
 };
 
 export default function RootLayout({
