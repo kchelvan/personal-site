@@ -63,8 +63,8 @@ const About = () => {
 							<br />
 							<br />
 							During his spare time, you&apos;ll find him exploring the city and
-							capturing photos. He has launched his professional photography
-							business Vanity Dreams Media.
+							capturing snapshots. He has worked on several photoshoots, which
+							can be viewed on his portfolio (Page coming Soon).
 						</p>
 					</div>
 				</div>
