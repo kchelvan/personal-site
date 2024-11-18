@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import GithubIcon from '@/public/icons/github-mark.svg';
+import InstagramIcon from '@/public/icons/instagram.svg';
 import LinkedInIcon from '@/public/icons/linkedin.svg';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -65,7 +66,7 @@ const HeroBanner = () => {
 					className='absolute bottom-2 left-1/2 -translate-x-1/2'
 				>
 					<div className='flex flex-row gap-8 justify-center bg-[#edeae5] w-fit mx-auto py-2 px-4 rounded-full'>
-						<Link href={'https://github.com/kchelvan'}>
+						<Link href={'https://github.com/kchelvan'} target='_blank'>
 							<Image
 								src={GithubIcon}
 								alt='GitHub Logo'
@@ -73,7 +74,18 @@ const HeroBanner = () => {
 								className='select-none hover:scale-125 transition-all hover:cursor-pointer'
 							/>
 						</Link>
-						<Link href={'https://www.linkedin.com/in/keshopan-chelvan/'}>
+						<Link href={'https://www.instagram.com/keshopan/'} target='_blank'>
+							<Image
+								src={InstagramIcon}
+								alt='Instagram Logo'
+								height={24}
+								className='select-none hover:scale-125 transition-all hover:cursor-pointer'
+							/>
+						</Link>
+						<Link
+							href={'https://www.linkedin.com/in/keshopan-chelvan/'}
+							target='_blank'
+						>
 							<Image
 								src={LinkedInIcon}
 								alt='GitHub Logo'
