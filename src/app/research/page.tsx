@@ -22,8 +22,8 @@ const ResearchPage = () => {
 						language patterns and psychological cues influence the spread of
 						misinformation, my research offers innovative solutions for fake
 						news classification. I have also been honored with a nomination for
-						the Governor General's Award for excellence in both research and
-						presentation skills. Explore my findings, methodologies, and
+						the Governor General&apos;s Award for excellence in both research
+						and presentation skills. Explore my findings, methodologies, and
 						contributions to the ongoing efforts to combat fake news.
 					</p>
 					<div className='flex flex-row gap-8 md:gap-16 w-full justify-center mt-8'>
