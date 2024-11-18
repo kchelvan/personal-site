@@ -19,7 +19,7 @@ const About = () => {
 						fill
 						style={{
 							objectFit: 'cover',
-							objectPosition: '0% 25%',
+							objectPosition: '50% 25%',
 						}}
 						className='rounded-3xl -z-10'
 					/>

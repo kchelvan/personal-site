@@ -14,7 +14,7 @@ const HeroCard = () => {
 				<Services />
 				<Projects />
 			</div>
-			<div className='bg-[#edeae5] mt-32'>
+			<div className='bg-[#edeae5] mt-12'>
 				<Contact />
 			</div>
 		</div>
