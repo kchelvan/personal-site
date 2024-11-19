@@ -17,14 +17,31 @@ const ResearchPage = () => {
 						intelligence, language learning models, and machine learning. I
 						leverage linguistic and psychological characteristics from text to
 						improve existing fake news classification systems, where I worked
-						alongside Dr. Cherie Ding and Dr. Shaina Raza to achieve a
-						classification accuracy rate exceeding 90%. By examining how
-						language patterns and psychological cues influence the spread of
-						misinformation, my research offers innovative solutions for fake
-						news classification. I have also been honored with a nomination for
-						the Governor General&apos;s Award for excellence in both research
-						and presentation skills. Explore my findings, methodologies, and
-						contributions to the ongoing efforts to combat fake news.
+						alongside{' '}
+						<a
+							href='https://scholar.google.ca/citations?user=_4W5qzQAAAAJ&hl=en'
+							className='font-bold'
+						>
+							Dr. Chen Ding
+						</a>{' '}
+						and{' '}
+						<a
+							href='https://scholar.google.com/citations?user=chcz7RMAAAAJ&hl=en'
+							className='font-bold'
+						>
+							Dr. Shaina Raza
+						</a>{' '}
+						to achieve a classification accuracy rate exceeding 90%. By
+						examining how language patterns and psychological cues influence the
+						spread of misinformation, my research offers innovative solutions
+						for fake news classification. I have also been honored with a
+						nomination for the Governor General&apos;s Award for excellence in
+						both research and presentation skills. Explore my findings,
+						methodologies, and contributions to the ongoing efforts to combat
+						fake news.
+					</p>
+					<p className='sub-text mt-8 text-lg text-center'>
+						Select a paper below:
 					</p>
 					<div className='flex flex-row gap-8 md:gap-16 w-full justify-center mt-8 md:text-xl'>
 						{PAPERS.map((paper) => (

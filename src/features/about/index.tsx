@@ -41,7 +41,11 @@ const About = () => {
 								Agile environments
 							</span>
 							, where he successfully transformed physical management processes
-							into streamlined digital applications.
+							into streamlined digital applications. View his{' '}
+							<a className='underline' href='/profession'>
+								portfolio
+							</a>
+							.
 							<br />
 							<br />
 							Keshopan has completed his master&apos;s thesis with a focus on
@@ -54,7 +58,11 @@ const About = () => {
 								Machine Learning
 							</span>
 							. He was nominated for the Governor General&apos;s Gold Medal for
-							exceptional research work and presentational skills.
+							exceptional research work and presentational skills. View his{' '}
+							<a className='underline' href='/research'>
+								research
+							</a>
+							.
 							<br />
 							<br />
 							During his spare time, you&apos;ll find him exploring the city and
