@@ -86,7 +86,7 @@ export const PROJECTS = [
 		],
 	},
 	{
-		label: 'Proprietary Mobile Application',
+		label: 'Proprietary Mobile Application (Confidential)',
 		imagesArray: PROJECT_PATHS.RPRA_HAZTRACK,
 		description: PROJECT_DESCRIPTIONS.RPRA,
 		// link: '',
