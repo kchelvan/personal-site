@@ -22,12 +22,16 @@ import RPRA_b from '@/public/projects/rpra-haztrack/rpra-2.jpg';
 import RPRA_c from '@/public/projects/rpra-haztrack/rpra-3.jpg';
 import RPRA_d from '@/public/projects/rpra-haztrack/rpra-4.jpg';
 
-import ComingSoon from '@/public/images/coming_soon.jpg';
+import SMS_a from '@/public/projects/sms/sms-1.jpg';
+import SMS_b from '@/public/projects/sms/sms-2.jpg';
+import SMS_c from '@/public/projects/sms/sms-3.jpg';
+
+// import ComingSoon from '@/public/images/coming_soon.jpg';
 
 const PROJECT_PATHS = {
 	RPRA_HAZTRACK: [RPRA_a, RPRA_b, RPRA_c, RPRA_d],
 	Marble: [Marble_a, Marble_b, Marble_c, Marble_d],
-	SMS: [ComingSoon],
+	SMS: [SMS_a, SMS_b, SMS_c],
 	JV_Homes: [JV_a, JV_b, JV_c],
 	RKS: [RKS_a, RKS_b, RKS_c],
 	Davids_Bridal: [Davids_Bridal_a, Davids_Bridal_b, Davids_Bridal_c],
