@@ -5,9 +5,9 @@ import Link from 'next/link';
 interface ProjectBodyProps {
 	index: number;
 	description?: string;
-	techStack: string[];
+	tech_stack?: string[];
 	link: string;
-	label: string;
+	title: string;
 }
 
 const ProjectHeader = ({ index, label }: ProjectHeaderTypes) => {
@@ -21,9 +21,9 @@ const ProjectHeader = ({ index, label }: ProjectHeaderTypes) => {
 export const ProjectBody = ({
 	index,
 	description,
-	techStack,
+	tech_stack: techStack,
 	link,
-	label,
+	title,
 }: ProjectBodyProps) => {
 	return (
 		<div
@@ -31,16 +31,12 @@ export const ProjectBody = ({
 				index % 2 == 0 ? 'lg:order-last' : 'lg:order-first'
 			}`}
 		>
-			<ProjectHeader index={index} label={label} />
+			<ProjectHeader index={index} label={title} />
 			<div className='h-full flex flex-col justify-between'>
 				<div>
 					<div>
-						<p
-							className={`sub-text whitespace-pre-line ${
-								techStack?.length > 0 ? 'my-4' : ''
-							}`}
-						>
-							{description || 'Details coming soon!'}
+						<p className={`sub-text whitespace-pre-line my-4`}>
+							{description?.replaceAll('<br/>', '\n') || 'Details coming soon!'}
 						</p>
 					</div>
 					{link ? (
