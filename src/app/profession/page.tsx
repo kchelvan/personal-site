@@ -2,14 +2,19 @@ import Projects from '@/features/projects';
 import Services from '@/features/services';
 import React from 'react';
 import ProfessionHeader from './header';
+import { PrismaClient } from '@prisma/client';
 
 const getProjects = async () => {
-	const response = await fetch(`${process.env.URL}/api/db/project`, {
-		next: { revalidate: 0 },
+	const prisma = new PrismaClient();
+	const projects = await prisma.project.findMany({
+		orderBy: [
+			{
+				id: 'asc',
+			},
+		],
 	});
 
-	const projects = await response.json();
-	return projects;
+	return { projects };
 };
 
 const ProfessionPage = async () => {
