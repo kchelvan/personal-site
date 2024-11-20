@@ -3,7 +3,7 @@ import Services from '@/features/services';
 import React from 'react';
 import ProfessionHeader from './header';
 
-export const getProjects = async () => {
+const getProjects = async () => {
 	const response = await fetch(`${process.env.URL}/api/db/project`, {
 		next: { revalidate: 0 },
 	});
