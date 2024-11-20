@@ -5,8 +5,8 @@ export type ProjectHeaderTypes = {
 };
 
 export type ProjectImagesTypes = {
-	label: string;
-	imagesArray: any[];
+	title: string;
+	images?: string[];
 	index?: number;
 	scroll?: boolean;
 };

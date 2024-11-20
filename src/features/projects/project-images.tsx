@@ -4,7 +4,10 @@ import React, { useEffect, useState } from 'react';
 import { ProjectImagesTypes } from './types';
 import Image from 'next/image';
 
-const ProjectImages = ({ index, label, imagesArray }: ProjectImagesTypes) => {
+import ComingSoon from '@/public/images/coming_soon.jpg';
+
+const ProjectImages = (props) => {
+	const { index, title, images: imagesArray }: ProjectImagesTypes = props;
 	const [imageCounter, setImageCounter] = useState(0);
 
 	const api = () => {
@@ -26,10 +29,11 @@ const ProjectImages = ({ index, label, imagesArray }: ProjectImagesTypes) => {
 	return (
 		<div className='transition-all ease w-full col-span-1 md:col-span-3'>
 			<Image
-				alt={`${label} ${imageCounter}`}
-				src={imagesArray[imageCounter]}
+				alt={`${title} ${imageCounter}`}
+				src={imagesArray[imageCounter] || ComingSoon}
 				className='rounded-2xl flex overflow-hidden w-full'
 				height={512}
+				width={100}
 				unoptimized
 			/>
 		</div>

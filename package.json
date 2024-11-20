@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "prisma generate && next build",
 		"start": "next start",
 		"lint": "next lint",
 		"dbstart": "dotenv -e .env.local -- npx prisma studio"
@@ -13,10 +13,12 @@
 		"@emotion/react": "^11.11.3",
 		"@emotion/styled": "^11.11.0",
 		"@mui/material": "^5.15.2",
+		"@prisma/client": "^5.22.0",
 		"@vercel/postgres": "^0.10.0",
 		"@vercel/speed-insights": "^1.0.2",
 		"formik": "^2.4.5",
 		"next": "14.0.4",
+		"prisma": "^5.22.0",
 		"react": "^18",
 		"react-dom": "^18",
 		"react-hot-toast": "^2.4.1",

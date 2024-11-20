@@ -1,46 +1,34 @@
 import React from 'react';
 
-import { PROJECTS } from './const';
 import ProjectBody from './project-body';
 import Divider from '@/components/ui/divider';
 import ProjectImages from './project-images';
 
-export const Project = ({
-	index,
-	label,
-	imagesArray,
-	link,
-	description,
-	techStack,
-}: any) => {
+export const Project = ({ index, ...project }: any) => {
 	return (
 		<div>
 			<div className='grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-8 md:mb-12'>
-				<ProjectImages index={index} label={label} imagesArray={imagesArray} />
-				<ProjectBody
-					index={index}
-					description={description}
-					techStack={techStack}
-					link={link}
-					label={label}
-				/>
+				<ProjectImages index={index} {...project} />
+				<ProjectBody index={index} {...project} />
 			</div>
 			<Divider />
 		</div>
 	);
 };
 
-const Projects = () => {
+const Projects = (props) => {
 	return (
 		<div>
 			<p id='projects' className='select-none text-5xl my-8 text-[#928b7b] '>
 				previous projects.
 			</p>
-			<div className='flex flex-col gap-16 md:gap-12'>
-				{PROJECTS.map((project, index) => (
-					<Project key={index} index={index} {...project} />
-				))}
-			</div>
+			{props?.projects ? (
+				<div className='flex flex-col gap-16 md:gap-12'>
+					{props.projects?.map((project, index) => (
+						<Project key={index} index={index} {...project} />
+					))}
+				</div>
+			) : null}
 		</div>
 	);
 };
