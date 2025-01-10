@@ -13,10 +13,10 @@ const ROUTES = [
 		label: 'PROFESSION',
 		route: '/profession',
 	},
-	{
-		label: 'RESUME',
-		route: '/resume',
-	},
+	// {
+	// 	label: 'RESUME',
+	// 	route: '/resume',
+	// },
 	{
 		label: 'RESEARCH',
 		route: '/research',
